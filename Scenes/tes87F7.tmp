@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cejgxdlmqm2ko"]
+[gd_scene load_steps=10 format=3 uid="uid://cejgxdlmqm2ko"]
 
 [ext_resource type="PackedScene" uid="uid://dvy7fuss2xujj" path="res://Scenes/player.tscn" id="1_5jnva"]
 [ext_resource type="Texture2D" uid="uid://cymqj1bgq1sc8" path="res://Assets/MasterTileset.png" id="2_hpitm"]
 [ext_resource type="Texture2D" uid="uid://diyxf0rwghwvk" path="res://Assets/FireHydrantTemp.png" id="3_q6vcy"]
 [ext_resource type="Script" path="res://Scenes/Shadow.gd" id="4_3vbck"]
+[ext_resource type="Shader" path="res://Scenes/test.gdshader" id="4_r7447"]
 [ext_resource type="Script" path="res://Scenes/Shadow2.gd" id="5_dwn0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7al2w"]
@@ -33,6 +34,10 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_7al2w")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3o2b7"]
+shader = ExtResource("4_r7447")
+shader_parameter/level = 0.5
+
 [node name="Test" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_5jnva")]
@@ -52,6 +57,7 @@ texture = ExtResource("3_q6vcy")
 [node name="Shadow" type="Sprite2D" parent="FireHydrantTemp"]
 modulate = Color(0, 0, 0, 0.670588)
 z_index = -1
+material = SubResource("ShaderMaterial_3o2b7")
 position = Vector2(0, 16)
 texture = ExtResource("3_q6vcy")
 offset = Vector2(0, -16)
