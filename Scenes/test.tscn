@@ -56,6 +56,7 @@ position = Vector2(0, 16)
 texture = ExtResource("3_q6vcy")
 offset = Vector2(0, -16)
 script = ExtResource("4_3vbck")
+ShadowProgressE = 5.375
 shadowScale = Vector2(8, 1.5)
 
 [node name="Shadow2" type="Sprite2D" parent="FireHydrantTemp"]

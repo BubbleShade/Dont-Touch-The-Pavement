@@ -55,7 +55,7 @@ func _process(delta):
 	#else: newTransform.x = Vector2(sinSP,cosSP)
 	var bounceSP = abs((modSP*2)-1)
 	# Change to move the sprite around idk
-	newTransform.origin = baseOrigin - Vector2(-cosSP*5, (bounceSP)*10)
+	newTransform.origin = baseOrigin #- Vector2(-cosSP*8, (bounceSP)*8)
 
 	# Update the sprites transform
 	transform = newTransform
