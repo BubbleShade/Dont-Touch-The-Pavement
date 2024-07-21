@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk4h8nm510g50"]
+
+[ext_resource type="Texture2D" uid="uid://catm8pi5o2y7k" path="res://Assets/StreetLamp.png" id="1_f8jlt"]
+[ext_resource type="Script" path="res://Scripts/Shadow.gd" id="2_an7av"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg7ha"]
+size = Vector2(4, 55)
+
+[node name="StreetLamp" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_f8jlt")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.670588)
+z_index = -1
+position = Vector2(0, 32)
+texture = ExtResource("1_f8jlt")
+offset = Vector2(0, -32)
+script = ExtResource("2_an7av")
+shadowScale = Vector2(4, 2)
+
+[node name="Shadow" type="Area2D" parent="Shadow" groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shadow/Shadow"]
+position = Vector2(0, -11.5)
+shape = SubResource("RectangleShape2D_jg7ha")
