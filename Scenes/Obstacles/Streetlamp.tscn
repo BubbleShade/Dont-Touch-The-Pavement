@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk4h8nm510g50"]
+[gd_scene load_steps=6 format=3 uid="uid://dk4h8nm510g50"]
 
 [ext_resource type="Texture2D" uid="uid://catm8pi5o2y7k" path="res://Assets/StreetLamp.png" id="1_f8jlt"]
 [ext_resource type="Script" path="res://Scripts/Shadow.gd" id="2_an7av"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg7ha"]
-size = Vector2(4, 55)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxgx3"]
+size = Vector2(6, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecrbb"]
+size = Vector2(2, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugl5j"]
+size = Vector2(8, 10)
 
 [node name="StreetLamp" type="Sprite2D"]
 scale = Vector2(2, 2)
@@ -12,6 +18,7 @@ texture = ExtResource("1_f8jlt")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.670588)
+show_behind_parent = true
 z_index = -1
 position = Vector2(0, 32)
 texture = ExtResource("1_f8jlt")
@@ -20,10 +27,21 @@ script = ExtResource("2_an7av")
 shadowScale = Vector2(4, 2)
 
 [node name="Shadow" type="Area2D" parent="Shadow" groups=["shadow"]]
+show_behind_parent = true
+z_index = 5
 position = Vector2(0, -16)
 collision_layer = 2
 collision_mask = 2
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shadow/Shadow"]
-position = Vector2(0, -11.5)
-shape = SubResource("RectangleShape2D_jg7ha")
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_rxgx3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shadow/Shadow"]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_ecrbb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Shadow/Shadow"]
+position = Vector2(0, -33)
+shape = SubResource("RectangleShape2D_ugl5j")

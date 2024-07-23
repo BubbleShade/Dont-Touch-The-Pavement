@@ -2,27 +2,30 @@
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_al6dd"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_8gg2j"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wen5h"]
 size = Vector2(24, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q13q"]
-size = Vector2(28, 28)
+size = Vector2(26, 26)
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_8gg2j"]
+
+[node name="Player" type="Node2D"]
 script = ExtResource("1_al6dd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(25, 25)
-texture = SubResource("CanvasTexture_8gg2j")
+[node name="Body2D" type="CharacterBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body2D"]
 shape = SubResource("RectangleShape2D_wen5h")
 
-[node name="ShadowHitbox" type="Area2D" parent="."]
+[node name="ShadowHitbox" type="Area2D" parent="Body2D"]
 collision_layer = 2
 collision_mask = 2
+monitorable = false
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ShadowHitbox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Body2D/ShadowHitbox"]
 shape = SubResource("RectangleShape2D_3q13q")
+
+[node name="Sprite" type="Sprite2D" parent="Body2D"]
+scale = Vector2(25, 25)
+texture = SubResource("CanvasTexture_8gg2j")
