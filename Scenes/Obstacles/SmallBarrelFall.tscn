@@ -1,29 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5iiuy5exvxak"]
+[gd_scene load_steps=6 format=3 uid="uid://dkd6uby1ng2ea"]
 
-[ext_resource type="Script" path="res://Scripts/Object.gd" id="1_7vd2l"]
-[ext_resource type="Texture2D" uid="uid://bthavi53hoqgv" path="res://Assets/Obstacles/SmallBarrel.png" id="2_7647q"]
+[ext_resource type="Script" path="res://Scripts/Object.gd" id="1_1aiyg"]
+[ext_resource type="Texture2D" uid="uid://5xhp53v22ips" path="res://Assets/Obstacles/SmallBarrelFall.png" id="2_7q466"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
 size = Vector2(12, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
-size = Vector2(14, 20)
+size = Vector2(18, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it1nd"]
+size = Vector2(6, 8)
 
 [node name="SmallBarrel" type="StaticBody2D"]
-script = ExtResource("1_7vd2l")
+script = ExtResource("1_1aiyg")
+shadowScale = Vector2(2, 1.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13.5)
 shape = SubResource("RectangleShape2D_yeoif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7647q")
+texture = ExtResource("2_7q466")
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 0.670588)
 z_index = -1
 position = Vector2(0, 16)
-texture = ExtResource("2_7647q")
+texture = ExtResource("2_7q466")
 offset = Vector2(0, -16)
 
 [node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
@@ -33,5 +37,9 @@ collision_mask = 2
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
-position = Vector2(0, 5)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_v4xkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(12, 12)
+shape = SubResource("RectangleShape2D_it1nd")

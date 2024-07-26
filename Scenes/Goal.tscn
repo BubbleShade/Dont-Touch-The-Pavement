@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwa3d3uwt0ghr"]
 
-[ext_resource type="Script" path="res://Scenes/Goal.gd" id="1_1ow5y"]
 [ext_resource type="Texture2D" uid="uid://cpc7qcq1joxk8" path="res://Assets/TempGoal.png" id="1_efdls"]
+[ext_resource type="Script" path="res://Scripts/Goal.gd" id="1_guxxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6ua7t"]
 
@@ -10,7 +10,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Goal" type="Area2D" groups=["Goal"]]
-script = ExtResource("1_1ow5y")
+script = ExtResource("1_guxxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_efdls")

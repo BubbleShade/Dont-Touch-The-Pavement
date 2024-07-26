@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqtf6b5c4tp0u"
-path="res://.godot/imported/AlchemyLamp.png-4183df36486605d34367ad2ad12e76f8.ctex"
+uid="uid://bthavi53hoqgv"
+path="res://.godot/imported/SmallBarrel.png-28059367ed181ab4c2e606ced76c5fde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AlchemyLamp.png"
-dest_files=["res://.godot/imported/AlchemyLamp.png-4183df36486605d34367ad2ad12e76f8.ctex"]
+source_file="res://Assets/Obstacles/SmallBarrel.png"
+dest_files=["res://.godot/imported/SmallBarrel.png-28059367ed181ab4c2e606ced76c5fde.ctex"]
 
 [params]
 

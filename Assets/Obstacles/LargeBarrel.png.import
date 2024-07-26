@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bthavi53hoqgv"
-path="res://.godot/imported/SmallBarrel.png-6881ed3879901fb505dfe2be19ab0b7d.ctex"
+uid="uid://cmxwg886cxsto"
+path="res://.godot/imported/LargeBarrel.png-67c02833d071494393efb6efe1ce6542.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallBarrel.png"
-dest_files=["res://.godot/imported/SmallBarrel.png-6881ed3879901fb505dfe2be19ab0b7d.ctex"]
+source_file="res://Assets/Obstacles/LargeBarrel.png"
+dest_files=["res://.godot/imported/LargeBarrel.png-67c02833d071494393efb6efe1ce6542.ctex"]
 
 [params]
 

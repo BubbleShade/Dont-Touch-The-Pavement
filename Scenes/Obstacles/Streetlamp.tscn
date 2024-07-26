@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dk4h8nm510g50"]
 
-[ext_resource type="Texture2D" uid="uid://catm8pi5o2y7k" path="res://Assets/StreetLamp.png" id="1_f8jlt"]
+[ext_resource type="Texture2D" uid="uid://catm8pi5o2y7k" path="res://Assets/Obstacles/StreetLamp.png" id="1_f8jlt"]
 [ext_resource type="Script" path="res://Scripts/Shadow.gd" id="2_an7av"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxgx3"]

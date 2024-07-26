@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmxwg886cxsto"
-path="res://.godot/imported/LargeBarrel.png-d687b88ca26e72ada7b74d0c5a167735.ctex"
+uid="uid://catm8pi5o2y7k"
+path="res://.godot/imported/StreetLamp.png-6cc77ce48bd9afc388b693593d18d4cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LargeBarrel.png"
-dest_files=["res://.godot/imported/LargeBarrel.png-d687b88ca26e72ada7b74d0c5a167735.ctex"]
+source_file="res://Assets/Obstacles/StreetLamp.png"
+dest_files=["res://.godot/imported/StreetLamp.png-6cc77ce48bd9afc388b693593d18d4cc.ctex"]
 
 [params]
 
