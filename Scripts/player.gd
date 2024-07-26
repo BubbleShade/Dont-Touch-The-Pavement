@@ -54,9 +54,6 @@ func onBodyEnter(body: Node):
 	if(body.is_in_group("shadow")):
 		collidingSafeBodies.append(body)
 		return
-	if(body.is_in_group("Goal")):
-		get_tree().change_scene_to_file("res://Scenes/test.tscn")
-		print("Victory")
 	
 func onBodyExit(body: Node):
 	collidingSafeBodies.remove_at(collidingSafeBodies.find(body))

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwa3d3uwt0ghr"]
+[gd_scene load_steps=5 format=3 uid="uid://cwa3d3uwt0ghr"]
 
+[ext_resource type="Script" path="res://Scenes/Goal.gd" id="1_1ow5y"]
 [ext_resource type="Texture2D" uid="uid://cpc7qcq1joxk8" path="res://Assets/TempGoal.png" id="1_efdls"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6ua7t"]
@@ -9,9 +10,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Goal" type="Area2D" groups=["Goal"]]
-collision_layer = 2
-collision_mask = 2
-monitoring = false
+script = ExtResource("1_1ow5y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_efdls")
@@ -35,3 +34,6 @@ scale_amount_curve = SubResource("Curve_83p8u")
 color = Color(0.860274, 0.509512, 0.85268, 1)
 hue_variation_min = -1.0
 hue_variation_max = 1.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
