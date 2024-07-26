@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var startLocation = position
 @export var speed = 150
 @export var accel = 800
 @onready var shadowbox: Area2D = get_node("ShadowHitbox")
@@ -7,7 +8,15 @@ extends CharacterBody2D
 
 var collidingSafeBodies = []
 @onready var lastPosition = position
-signal test
+func _ready():
+	shadowbox.area_entered.connect(onBodyEnter)
+	shadowbox.area_exited.connect(onBodyExit)
+	LevelInfo.restartLevel.connect(restart)
+func restart():
+	position = startLocation
+
+
+
 func Vector2Clamp(inputVector, v1: Vector2, v2: Vector2):
 	return Vector2(max(v1.x, min(inputVector.x, v2.x)),
 					max(v1.y, min(inputVector.y, v2.y)))
@@ -40,16 +49,13 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta): pass
-
-func _ready():
-	shadowbox.area_entered.connect(onBodyEnter)
-	shadowbox.area_exited.connect(onBodyExit)
 	
 func onBodyEnter(body: Node):
 	if(body.is_in_group("shadow")):
 		collidingSafeBodies.append(body)
 		return
 	if(body.is_in_group("Goal")):
+		get_tree().change_scene_to_file("res://Scenes/test.tscn")
 		print("Victory")
 	
 func onBodyExit(body: Node):
