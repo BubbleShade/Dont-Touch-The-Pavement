@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvy7fuss2xujj"]
+[gd_scene load_steps=17 format=3 uid="uid://dvy7fuss2xujj"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_al6dd"]
 [ext_resource type="Texture2D" uid="uid://dppfs5s7k8f7i" path="res://Assets/GoobertSpriteSheet.png" id="2_5asps"]
-[ext_resource type="Script" path="res://Scripts/PlayerShadow.gd" id="3_x6bdp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wen5h"]
 size = Vector2(15, 3)
@@ -82,7 +81,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 4.0,
@@ -111,7 +110,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_8gg2j"]
@@ -135,19 +134,7 @@ shape = SubResource("RectangleShape2D_3q13q")
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_vgbrm")
-animation = &"Walk"
 autoplay = "default"
-
-[node name="Shadow" type="AnimatedSprite2D" parent="AnimatedSprite"]
-modulate = Color(0, 0, 0, 0.392157)
-z_index = -1
-position = Vector2(0, 8)
-sprite_frames = SubResource("SpriteFrames_vgbrm")
-animation = &"Walk"
-autoplay = "default"
-offset = Vector2(0, -8)
-script = ExtResource("3_x6bdp")
-shadowScale = Vector2(4, 1.5)
 
 [node name="Sprite" type="Sprite2D" parent="."]
 visible = false

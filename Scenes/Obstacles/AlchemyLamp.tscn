@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7qxcvf84hoit"]
+
+[ext_resource type="Texture2D" uid="uid://bqtf6b5c4tp0u" path="res://Assets/AlchemyLamp.png" id="1_61vjn"]
+[ext_resource type="Script" path="res://Scripts/Shadow.gd" id="2_3yu7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
+size = Vector2(8, 2.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
+size = Vector2(4, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38kti"]
+size = Vector2(6, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq3wr"]
+size = Vector2(10, 12)
+
+[node name="AlchemyLamp" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 29.25)
+shape = SubResource("RectangleShape2D_yeoif")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_61vjn")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.670588)
+z_index = -1
+position = Vector2(0, 32)
+texture = ExtResource("1_61vjn")
+offset = Vector2(0, -32)
+script = ExtResource("2_3yu7n")
+shadowScale = Vector2(4.5, 1.8)
+
+[node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_v4xkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_38kti")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(0, -33)
+shape = SubResource("RectangleShape2D_sq3wr")

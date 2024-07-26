@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk4h8nm510g50"]
+[gd_scene load_steps=7 format=3 uid="uid://dk4h8nm510g50"]
 
 [ext_resource type="Texture2D" uid="uid://catm8pi5o2y7k" path="res://Assets/StreetLamp.png" id="1_f8jlt"]
 [ext_resource type="Script" path="res://Scripts/Shadow.gd" id="2_an7av"]
@@ -11,6 +11,9 @@ size = Vector2(2, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugl5j"]
 size = Vector2(8, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2bh0"]
+size = Vector2(10, 3)
 
 [node name="StreetLamp" type="Sprite2D"]
 scale = Vector2(2, 2)
@@ -45,3 +48,9 @@ shape = SubResource("RectangleShape2D_ecrbb")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Shadow/Shadow"]
 position = Vector2(0, -32.5)
 shape = SubResource("RectangleShape2D_ugl5j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 30.5)
+shape = SubResource("RectangleShape2D_a2bh0")

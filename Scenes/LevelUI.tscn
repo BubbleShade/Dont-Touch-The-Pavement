@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmh2uygnq3e7t"]
+[gd_scene load_steps=6 format=3 uid="uid://cmh2uygnq3e7t"]
 
-[ext_resource type="Script" path="res://Scenes/HSlider.gd" id="1_uiyxo"]
+[ext_resource type="Texture2D" uid="uid://dvmgyma4q2814" path="res://Assets/SunManipulator.png" id="1_pr5rl"]
+[ext_resource type="Script" path="res://Scripts/HSlider.gd" id="2_uylj0"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6njxm"]
+color = Color(0.506954, 0.00314679, 0.872355, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n50vh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymimb"]
 
 [node name="LevelUi" type="Control"]
 layout_mode = 3
@@ -13,10 +22,17 @@ grow_vertical = 2
 [node name="HSlider" type="HSlider" parent="."]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 619.0
+offset_top = 598.0
 offset_right = 1125.0
-offset_bottom = 635.0
-max_value = 1.0
+offset_bottom = 630.0
+theme_override_icons/grabber = ExtResource("1_pr5rl")
+theme_override_icons/grabber_highlight = ExtResource("1_pr5rl")
+theme_override_icons/grabber_disabled = ExtResource("1_pr5rl")
+theme_override_styles/slider = SubResource("StyleBoxLine_6njxm")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_n50vh")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_ymimb")
+min_value = 0.1
+max_value = 0.9
 step = 0.001
 value = 0.5
-script = ExtResource("1_uiyxo")
+script = ExtResource("2_uylj0")

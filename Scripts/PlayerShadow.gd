@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 # Determines the phase of the shadow. 
 # 0 is to the left of the object
 # 0.5 is behind the object
@@ -7,6 +7,7 @@ extends Sprite2D
 @export var shadowScale = Vector2(5,1.5)
 #@onready var sprite = get_node("Sprite")
 @onready var baseOrigin = -offset
+@onready var parent : AnimatedSprite2D = get_parent()
 #var shader_value = material.get_shader_param("level")
 # Called when the node enters the scene tree for the first time.
 func _ready(): pass
@@ -14,8 +15,10 @@ func _ready(): pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	animation = parent.animation
+	frame = parent.frame
 	#print(shader_value)
+
 	# https://docs.godotengine.org/en/stable/tutorials/math/matrices_and_transforms.html
 	var newTransform = Transform2D() 	# Creates a new transform object
 	#Modified shadow progess, this looks weird, but it just clamps ShadowProgress between 0 and 1,
