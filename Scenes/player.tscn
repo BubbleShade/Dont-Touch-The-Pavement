@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_al6dd"]
 [ext_resource type="Texture2D" uid="uid://dppfs5s7k8f7i" path="res://Assets/GoobertSpriteSheet.png" id="2_5asps"]
-[ext_resource type="Script" path="res://Scripts/PlayerShadow.gd" id="3_x6bdp"]
+[ext_resource type="Script" path="res://Scripts/AnimatedShadow.gd" id="3_ka5sr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wen5h"]
 size = Vector2(15, 3)
@@ -146,7 +146,7 @@ sprite_frames = SubResource("SpriteFrames_vgbrm")
 animation = &"Walk"
 autoplay = "default"
 offset = Vector2(0, -8)
-script = ExtResource("3_x6bdp")
+script = ExtResource("3_ka5sr")
 shadowScale = Vector2(4, 1.5)
 
 [node name="Sprite" type="Sprite2D" parent="."]

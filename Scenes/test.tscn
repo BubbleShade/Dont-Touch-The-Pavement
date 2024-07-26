@@ -217,4 +217,4 @@ position = Vector2(364, 316)
 position = Vector2(921, 198)
 
 [node name="Goal" parent="." instance=ExtResource("7_xsrqv")]
-position = Vector2(1082, 70)
+position = Vector2(807, 77)
