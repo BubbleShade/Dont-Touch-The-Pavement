@@ -44,5 +44,5 @@ text = "resume"
 script = ExtResource("1_31ys4")
 
 [connection signal="pressed" from="CanvasLayer/main menu" to="CanvasLayer/main menu" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_resume"]
 [connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_go_back"]
+[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_resume"]
