@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cal2anclldcu6"
-path="res://.godot/imported/ElixerVileElixir.png-3000e7618c74d49d51821a6db849a18f.ctex"
+uid="uid://cvicynhmrqa4l"
+path="res://.godot/imported/ElixerVileEmpty.png-08e71976903aa09932607d56873ead2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ElixerVileElixir.png"
-dest_files=["res://.godot/imported/ElixerVileElixir.png-3000e7618c74d49d51821a6db849a18f.ctex"]
+source_file="res://Assets/LevelUI/ElixerVileEmpty.png"
+dest_files=["res://.godot/imported/ElixerVileEmpty.png-08e71976903aa09932607d56873ead2e.ctex"]
 
 [params]
 

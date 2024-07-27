@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpwdrqpubxdsw"
-path="res://.godot/imported/ElixirVileCover.png-71a7e529f221a5fbb6ca64f3d0c8696f.ctex"
+path="res://.godot/imported/ElixirVileCover.png-8e2f1850302dce9f06ffa0cdc4b1085c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ElixirVileCover.png"
-dest_files=["res://.godot/imported/ElixirVileCover.png-71a7e529f221a5fbb6ca64f3d0c8696f.ctex"]
+source_file="res://Assets/LevelUI/ElixirVileCover.png"
+dest_files=["res://.godot/imported/ElixirVileCover.png-8e2f1850302dce9f06ffa0cdc4b1085c.ctex"]
 
 [params]
 

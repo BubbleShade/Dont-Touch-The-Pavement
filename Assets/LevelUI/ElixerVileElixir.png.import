@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvmgyma4q2814"
-path="res://.godot/imported/SunManipulator.png-c2577b78e8f593b03c87579d3397f2cc.ctex"
+uid="uid://cal2anclldcu6"
+path="res://.godot/imported/ElixerVileElixir.png-5921ed90b5c1267b017acfeb85c1fa92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SunManipulator.png"
-dest_files=["res://.godot/imported/SunManipulator.png-c2577b78e8f593b03c87579d3397f2cc.ctex"]
+source_file="res://Assets/LevelUI/ElixerVileElixir.png"
+dest_files=["res://.godot/imported/ElixerVileElixir.png-5921ed90b5c1267b017acfeb85c1fa92.ctex"]
 
 [params]
 
