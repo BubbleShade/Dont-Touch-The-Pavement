@@ -27,6 +27,7 @@ func restart(playsound: bool):
 	elixirEmptyWarn.visible = false
 	pressR.visible = false
 	elixirDisplay.visible = true
+	synthloop.stream_paused = true
 	updateInterface()
 	print(LevelInfo.elixir)
 func setScreenTint():

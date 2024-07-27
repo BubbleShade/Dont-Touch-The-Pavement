@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cejgxdlmqm2ko"]
+[gd_scene load_steps=9 format=3 uid="uid://cejgxdlmqm2ko"]
 
 [ext_resource type="PackedScene" uid="uid://dvy7fuss2xujj" path="res://Scenes/player.tscn" id="1_5jnva"]
 [ext_resource type="TileSet" uid="uid://dgukfxthoomud" path="res://MasterTileset.tres" id="3_8676k"]
 [ext_resource type="PackedScene" uid="uid://cmh2uygnq3e7t" path="res://Scenes/LevelUI.tscn" id="4_dbk6q"]
 [ext_resource type="PackedScene" uid="uid://bl8sei63qbsll" path="res://Scenes/Obstacles/LargeBarrel.tscn" id="6_0l3d4"]
 [ext_resource type="PackedScene" uid="uid://c5iiuy5exvxak" path="res://Scenes/Obstacles/SmallBarrel.tscn" id="6_kbm1v"]
+[ext_resource type="PackedScene" uid="uid://c7qxcvf84hoit" path="res://Scenes/Obstacles/AlchemyLamp.tscn" id="7_rx0gg"]
 [ext_resource type="PackedScene" uid="uid://cwa3d3uwt0ghr" path="res://Scenes/Goal.tscn" id="7_xsrqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4cfd"]
@@ -61,3 +62,6 @@ position = Vector2(807, 77)
 
 [node name="LargeBarrel3" parent="." instance=ExtResource("6_0l3d4")]
 position = Vector2(204, 57)
+
+[node name="AlchemyLamp" parent="." instance=ExtResource("7_rx0gg")]
+position = Vector2(116, 67)

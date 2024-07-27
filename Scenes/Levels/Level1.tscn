@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cwa3d3uwt0ghr" path="res://Scenes/Goal.tscn" id="5_j7wmh"]
 
 [node name="Level1" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_f72em")
@@ -28,19 +29,19 @@ layer_2/tile_data = PackedInt32Array(14, 131072, 4, 65550, 131072, 4, 131086, 13
 position = Vector2(144, 336)
 
 [node name="LargeBarrel" parent="." instance=ExtResource("4_micvy")]
-position = Vector2(466, 38)
+position = Vector2(466, 54)
 
 [node name="LargeBarrel2" parent="." instance=ExtResource("4_micvy")]
-position = Vector2(632, 142)
+position = Vector2(632, 158)
 
 [node name="LargeBarrel3" parent="." instance=ExtResource("4_micvy")]
-position = Vector2(464, 310)
+position = Vector2(464, 326)
 
 [node name="LargeBarrel4" parent="." instance=ExtResource("4_micvy")]
-position = Vector2(631, 338)
+position = Vector2(631, 354)
 
 [node name="LargeBarrel5" parent="." instance=ExtResource("4_micvy")]
-position = Vector2(468, 594)
+position = Vector2(468, 578)
 
 [node name="Goal" parent="." instance=ExtResource("5_j7wmh")]
 position = Vector2(1085, 334)

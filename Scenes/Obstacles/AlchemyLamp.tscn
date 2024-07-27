@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqtf6b5c4tp0u" path="res://Assets/Obstacles/AlchemyLamp.png" id="2_wc03q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
-size = Vector2(8, 2.5)
+size = Vector2(8, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
 size = Vector2(4, 26)
@@ -20,18 +20,17 @@ scale = Vector2(2, 2)
 script = ExtResource("1_1yy5h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 29.25)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_yeoif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture = ExtResource("2_wc03q")
+offset = Vector2(0, -32)
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 0.666667)
 z_index = -1
-y_sort_enabled = true
-position = Vector2(0, 32)
 texture = ExtResource("2_wc03q")
 offset = Vector2(0, -32)
 
