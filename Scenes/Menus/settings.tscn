@@ -33,5 +33,5 @@ text = "resume"
 script = ExtResource("1_31ys4")
 
 [connection signal="pressed" from="main menu" to="main menu" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="resume" to="main menu" method="_resume"]
 [connection signal="pressed" from="resume" to="main menu" method="_go_back"]
+[connection signal="pressed" from="resume" to="main menu" method="_resume"]
