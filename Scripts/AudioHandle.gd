@@ -14,6 +14,7 @@ enum Type {
 static func play(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0) -> void:
 	var audio_stream_player := AudioStreamPlayer.new()
 	parent.add_child(audio_stream_player)
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = stream
 	audio_stream_player.volume_db = volume_db
@@ -28,6 +29,7 @@ static func play(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitc
 static func playForTime(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0, time: float = 1.0) -> void:
 	var audio_stream_player := AudioStreamPlayer.new()
 	parent.add_child(audio_stream_player)
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = stream
 	audio_stream_player.volume_db = volume_db
@@ -43,6 +45,7 @@ static func playForTime(parent: Node, stream: AudioStream, volume_db: float = 0.
 
 static func playSection(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0, startTime: float = 0.0, time: float = 1.0) -> void:
 	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	parent.add_child(audio_stream_player)
 	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = stream
@@ -62,6 +65,7 @@ static func playSection(parent: Node, stream: AudioStream, volume_db: float = 0.
 # specified as parameter.
 static func playAtTime(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0, time : float = 0.0) -> void:
 	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	parent.add_child(audio_stream_player)
 	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = stream
@@ -74,6 +78,7 @@ static func playAtTime(parent: Node, stream: AudioStream, volume_db: float = 0.0
 	
 static func loop(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0) -> void:
 	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	parent.add_child(audio_stream_player)
 	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = stream
@@ -84,6 +89,7 @@ static func loop(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitc
 	
 static func createLoop(parent: Node, stream: AudioStream, volume_db: float = 0.0, pitch_scale: float = 1.0) -> AudioStreamPlayer:
 	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	parent.add_child(audio_stream_player)
 	audio_stream_player.bus = "Effects"

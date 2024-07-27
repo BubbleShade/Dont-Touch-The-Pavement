@@ -20,7 +20,8 @@ func _on_settings_pressed_menu():
 	MenuHandler.switchScene("res://Scenes/Menus/settings.tscn", "Settings", "MainMenu")
 func _on_settings_pressed_pause():
 	MenuHandler.switchScene("res://Scenes/Menus/settings.tscn", "Settings", "PauseMenu")
-
+func _unpause():
+	get_tree().paused = false
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func _on_back_pressed():
 	MenuHandler.returnToScene()

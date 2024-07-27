@@ -72,8 +72,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if !MenuHandler.sceneActive():
 			MenuHandler.genScene("res://Scenes/Menus/PauseMenu.tscn", "PauseMenu")
-		else: 
-			MenuHandler.returnToScene()
+
 		
 	if(Input.is_action_pressed("restart")):
 		Rtime += delta
