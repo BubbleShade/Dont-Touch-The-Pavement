@@ -6,8 +6,8 @@ extends AnimatedSprite2D
 
 @export var shadowScale = Vector2(5,1.5)
 #@onready var sprite = get_node("Sprite")
-@onready var baseOrigin = -offset
-@onready var parent : AnimatedSprite2D = get_parent()
+@onready var baseOrigin = Vector2.ZERO
+@onready var parent : AnimatedSprite2D = get_parent().get_node("AnimatedSprite")
 #var shader_value = material.get_shader_param("level")
 # Called when the node enters the scene tree for the first time.
 func _ready(): pass

@@ -1,14 +1,16 @@
 extends Node
 
-@export var shadowScale := Vector2(4,1.5)
+@onready var ShadowSize := Vector2(4,1.5)
 @onready var Shadow : Sprite2D = get_node("Sprite2D/Shadow")
+@onready var Sprite : Sprite2D = get_node("Sprite2D")
 # Determines the phase of the shadow. 
 # 0 is to the left of the object
 # 0.5 is behind the object
 # 1 is to the right of the object
 
+@export var shadowScale = Vector2(5,1.5)
 #@onready var sprite = get_node("Sprite")
-@onready var baseOrigin = -Shadow.offset
+@onready var baseOrigin = -Shadow.offset + Sprite.offset
 #var shader_value = material.get_shader_param("level")
 # Called when the node enters the scene tree for the first time.
 func _ready(): pass

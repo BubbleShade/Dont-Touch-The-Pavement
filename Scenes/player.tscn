@@ -120,7 +120,7 @@ animations = [{
 script = ExtResource("1_al6dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 10.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_wen5h")
 
 [node name="ShadowHitbox" type="Area2D" parent="."]
@@ -129,27 +129,33 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ShadowHitbox"]
-position = Vector2(-1, 8.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_3q13q")
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+[node name="Shadow" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.392157)
+show_behind_parent = true
+y_sort_enabled = true
+position = Vector2(0, 8)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_vgbrm")
 animation = &"Walk"
 autoplay = "default"
-
-[node name="Shadow" type="AnimatedSprite2D" parent="AnimatedSprite"]
-modulate = Color(0, 0, 0, 0.392157)
-z_index = -1
-position = Vector2(0, 8)
-sprite_frames = SubResource("SpriteFrames_vgbrm")
-animation = &"Walk"
-autoplay = "default"
-offset = Vector2(0, -8)
+offset = Vector2(0, -9)
 script = ExtResource("3_ka5sr")
 shadowScale = Vector2(4, 1.5)
 
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 9)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vgbrm")
+animation = &"Walk"
+autoplay = "default"
+offset = Vector2(0, -9)
+
 [node name="Sprite" type="Sprite2D" parent="."]
 visible = false
+y_sort_enabled = true
 scale = Vector2(25, 25)
 texture = SubResource("CanvasTexture_8gg2j")

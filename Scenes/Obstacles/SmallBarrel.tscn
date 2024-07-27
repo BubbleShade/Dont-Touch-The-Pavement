@@ -10,6 +10,7 @@ size = Vector2(12, 3)
 size = Vector2(14, 20)
 
 [node name="SmallBarrel" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_7vd2l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,11 +18,13 @@ position = Vector2(0, 13.5)
 shape = SubResource("RectangleShape2D_yeoif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture = ExtResource("2_7647q")
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 0.670588)
+modulate = Color(0, 0, 0, 0.666667)
 z_index = -1
+y_sort_enabled = true
 position = Vector2(0, 16)
 texture = ExtResource("2_7647q")
 offset = Vector2(0, -16)

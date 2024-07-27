@@ -24,11 +24,13 @@ position = Vector2(0, 29.25)
 shape = SubResource("RectangleShape2D_yeoif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture = ExtResource("2_wc03q")
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 0.670588)
+modulate = Color(0, 0, 0, 0.666667)
 z_index = -1
+y_sort_enabled = true
 position = Vector2(0, 32)
 texture = ExtResource("2_wc03q")
 offset = Vector2(0, -32)
