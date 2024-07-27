@@ -9,5 +9,3 @@ func load_scene(Scene, anim = "Fade"):
 	get_tree().change_scene_to_file("res://Scenes/%s.tscn" % Scene)
 	animPlayer.play_backwards(anim)
 func _process(delta): pass
-	# https://www.youtube.com/watch?v=jfRoLL0mEzY
-	# https://www.reddit.com/r/godot/comments/cjigi4/how_do_i_make_hitting_the_esc_key_exit_the_game/?rdt=4797

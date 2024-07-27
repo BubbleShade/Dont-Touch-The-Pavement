@@ -1,6 +1,7 @@
 extends Node
 var sceneActive = false
 var NodeName = ""
+# https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func genScene(path, nodeName):
 	var TheRoot = get_node("/root")  # need this as get_node will stop work once you remove your self from the Tree
 	var ThisScene = get_node("/root/Main")
@@ -11,6 +12,7 @@ func genScene(path, nodeName):
 	TheRoot.add_child(NextScene)
 	sceneActive = true
 	NodeName = nodeName
+# https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func returnToScene():
 	var TheRoot = get_node("/root")
 	var ThisScene = get_node("/root/%s" % NodeName)
