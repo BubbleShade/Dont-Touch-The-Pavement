@@ -17,6 +17,7 @@ texture = ExtResource("1_efdls")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_6ua7t")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]

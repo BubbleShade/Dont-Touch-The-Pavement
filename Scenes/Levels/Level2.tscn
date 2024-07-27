@@ -45,7 +45,7 @@ position = Vector2(440, 98)
 
 [node name="AlchemyLamp" parent="." instance=ExtResource("7_dqgau")]
 position = Vector2(809, 379)
-shadowScale = Vector2(4, 2)
+shadowScale = Vector2(3.5, 2)
 
 [node name="LargeBarrel3" parent="." instance=ExtResource("4_m0b76")]
 position = Vector2(464, 429)
