@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://7302kl7cah4e"]
+
+[ext_resource type="Script" path="res://Scenes/Main menu/start_button.gd" id="1_j7fq5"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 646.0
+
+[node name="Button" type="Button" parent="CenterContainer"]
+layout_mode = 2
+text = "click me for furries near you
+SEKAIIIIIIII
+"
+script = ExtResource("1_j7fq5")
+
+[connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_button_pressed"]
