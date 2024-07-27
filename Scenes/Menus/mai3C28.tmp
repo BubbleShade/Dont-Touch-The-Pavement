@@ -10,16 +10,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.113725, 1, 1, 1)
-
 [node name="start game" type="Button" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 324.0
+offset_right = 226.0
+offset_bottom = 54.0
 text = "click me for furries near you
 SEKAIIIIIIII
 "
@@ -27,14 +21,14 @@ script = ExtResource("1_j7fq5")
 
 [node name="settings" type="Button" parent="."]
 layout_mode = 0
-offset_top = 324.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_top = 54.0
+offset_right = 226.0
+offset_bottom = 103.0
 text = "settings
 "
 script = ExtResource("1_j7fq5")
 
-[connection signal="pressed" from="start game" to="start game" method="_on_button_pressed"]
 [connection signal="pressed" from="start game" to="start game" method="_on_pressed"]
+[connection signal="pressed" from="start game" to="start game" method="_on_button_pressed"]
 [connection signal="pressed" from="start game" to="start game" method="_on_start_pressed"]
 [connection signal="pressed" from="settings" to="start game" method="_on_settings_pressed"]
