@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmh2uygnq3e7t"]
 
-[ext_resource type="Script" path="res://Scripts/LevelUI.gd" id="1_7tgk2"]
+[ext_resource type="Script" path="res://Scripts/UI/LevelUI.gd" id="1_7tgk2"]
 [ext_resource type="Texture2D" uid="uid://cvicynhmrqa4l" path="res://Assets/LevelUI/ElixerVileEmpty.png" id="2_5cst0"]
 [ext_resource type="Texture2D" uid="uid://bpwdrqpubxdsw" path="res://Assets/LevelUI/ElixirVileCover.png" id="3_xlbx5"]
 [ext_resource type="Texture2D" uid="uid://cal2anclldcu6" path="res://Assets/LevelUI/ElixerVileElixir.png" id="4_mtf6e"]

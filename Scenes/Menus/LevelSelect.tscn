@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk172ey48w80w"]
+
+[ext_resource type="StyleBox" uid="uid://1wcbx3t4g1xc" path="res://Scenes/Menus/new_style_box_flat.tres" id="1_3vy0l"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="2_edfjt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs0ae"]
+bg_color = Color(0.164706, 0, 0.196078, 0.796078)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.368651, 0.37377, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gokxs"]
+bg_color = Color(0.119277, 0.118651, 0.180596, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.688134, 0.597014, 0.0151292, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="LevelSelect" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 1136.0
+offset_bottom = 631.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hs0ae")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 7.0
+offset_right = 1107.0
+offset_bottom = 79.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0.313726, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 5
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center] Level Select"
+scroll_active = false
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 299.0
+offset_top = 135.0
+offset_right = 339.0
+offset_bottom = 175.0
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 110.0
+offset_right = 203.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_3vy0l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gokxs")
+text = "1
+"
+
+[node name="Main Menu" type="Button" parent="Panel"]
+offset_left = 876.0
+offset_top = 523.0
+offset_right = 1066.0
+offset_bottom = 590.0
+text = "Back
+"
+script = ExtResource("2_edfjt")
+
+[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_back_pressed"]

@@ -64,4 +64,4 @@ shadowScale = Vector2(3, 1.3)
 position = Vector2(672, 473)
 
 [node name="LargeBarrel6" parent="." instance=ExtResource("5_kts5f")]
-position = Vector2(904, 267)
+position = Vector2(956, 269)

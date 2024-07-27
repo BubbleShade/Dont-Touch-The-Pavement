@@ -24,12 +24,22 @@ func _unpause():
 	get_tree().paused = false
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func _on_back_pressed():
+	print("Back")
 	MenuHandler.returnToScene()
 
 func _on_main_menu_pressed():
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/Menus/main menu.tscn")
 	MenuHandler.clearScenes()
 
 
 func _on_start_pressed():
 	SceneTransition.load_scene("Levels/Level1")
+
+func _open_menu(name: String, nodeName: String):
+	MenuHandler.genScene("res://Scenes/Menus/%s.tscn" % name, nodeName)
+func _switch_menu(name: String, nodeName: String, currentNodeName: String):
+	MenuHandler.switchScene("res://Scenes/Menus/%s.tscn" % name, nodeName, currentNodeName)
+
+
+

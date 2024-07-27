@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dukeoiahj17gk"]
 
-[ext_resource type="Script" path="res://Scripts/buttons.gd" id="1_31ys4"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_31ys4"]
 
 [sub_resource type="Theme" id="Theme_1u5by"]
 
 [node name="Settings" type="Control"]
+process_mode = 3
 process_priority = 5
 z_index = 5
 layout_mode = 3

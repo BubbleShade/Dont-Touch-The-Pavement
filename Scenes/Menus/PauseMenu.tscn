@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c77luiir4aghj"]
 
-[ext_resource type="Script" path="res://Scripts/buttons.gd" id="1_g6xr0"]
-[ext_resource type="Script" path="res://Scenes/Menus/PauseMenu.gd" id="1_pj3lh"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_g6xr0"]
+[ext_resource type="Script" path="res://Scripts/UI/PauseMenu.gd" id="1_pj3lh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8tbv"]
 bg_color = Color(0.0476613, 5.62769e-05, 0.141394, 0.737255)
@@ -35,6 +35,7 @@ offset_top = 477.0
 offset_right = 368.0
 offset_bottom = 544.0
 text = "Return to Main Menu"
+script = ExtResource("1_g6xr0")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
@@ -51,6 +52,7 @@ bbcode_enabled = true
 text = "[center] Game Paused"
 
 [node name="Settings" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 290.0
 offset_right = 368.0
@@ -60,6 +62,7 @@ text = "Settings
 script = ExtResource("1_g6xr0")
 
 [node name="back" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 202.0
 offset_right = 368.0
@@ -68,7 +71,16 @@ text = "Return to Game
 "
 script = ExtResource("1_g6xr0")
 
-[connection signal="pressed" from="Panel/Main Menu" to="Panel/back" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="Panel/Main Menu" to="." method="_unpause"]
+[node name="LevelSelect" type="Button" parent="Panel"]
+offset_left = 24.0
+offset_top = 382.0
+offset_right = 369.0
+offset_bottom = 449.0
+text = "Level Select
+"
+script = ExtResource("1_g6xr0")
+
+[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Panel/Settings" to="Panel/Settings" method="_on_settings_pressed_pause"]
 [connection signal="pressed" from="Panel/back" to="." method="_unpause"]
+[connection signal="pressed" from="Panel/LevelSelect" to="Panel/LevelSelect" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "PauseMenu"]]
