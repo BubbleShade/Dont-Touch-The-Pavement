@@ -15,16 +15,19 @@ func _process(delta):
 ############################# https://youtu.be/tmSBGJGDUuQ
 
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
-func _on_settings_pressed():
+func _on_settings_pressed_menu():
 	#get_tree().change_scene_to_file("res://Scenes/Menus/settings.tscn")
-	MenuHandler.genScene("res://Scenes/Menus/settings.tscn", "Settings")
+	MenuHandler.switchScene("res://Scenes/Menus/settings.tscn", "Settings", "MainMenu")
+func _on_settings_pressed_pause():
+	MenuHandler.switchScene("res://Scenes/Menus/settings.tscn", "Settings", "PauseMenu")
 
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
-func _resume():
+func _on_back_pressed():
 	MenuHandler.returnToScene()
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menus/main menu.tscn")
+	MenuHandler.clearScenes()
 
 
 func _on_start_pressed():

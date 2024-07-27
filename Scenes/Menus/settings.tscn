@@ -26,23 +26,12 @@ offset_bottom = 633.0
 theme = SubResource("Theme_1u5by")
 color = Color(0, 0, 0, 0.917647)
 
-[node name="main menu" type="Button" parent="CanvasLayer"]
-offset_left = 180.0
-offset_top = 544.0
-offset_right = 377.0
-offset_bottom = 591.0
-text = "go to main menu
-"
-script = ExtResource("1_31ys4")
-
-[node name="resume" type="Button" parent="CanvasLayer"]
-offset_left = 812.0
+[node name="back" type="Button" parent="CanvasLayer"]
+offset_left = 861.0
 offset_top = 550.0
 offset_right = 979.0
 offset_bottom = 587.0
-text = "resume"
+text = "Back"
 script = ExtResource("1_31ys4")
 
-[connection signal="pressed" from="CanvasLayer/main menu" to="CanvasLayer/main menu" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_go_back"]
-[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_resume"]
+[connection signal="pressed" from="CanvasLayer/back" to="CanvasLayer/back" method="_on_back_pressed"]
