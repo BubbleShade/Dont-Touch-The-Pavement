@@ -19,8 +19,7 @@ config/icon="res://icon.svg"
 
 LevelInfo="*res://Scripts/LevelInfo.gd"
 SceneTransition="*res://Scenes/SceneTransition.tscn"
-PauseMenu="*res://Scenes/Menus/pause_menu.gd"
-Buttons="*res://Scenes/Menus/buttons.gd"
+MenuHandler="*res://Scripts/MenuHandler.gd"
 
 [input]
 

@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dukeoiahj17gk"]
+[gd_scene load_steps=3 format=3 uid="uid://dukeoiahj17gk"]
 
-[ext_resource type="Script" path="res://Scenes/Menus/buttons.gd" id="1_31ys4"]
+[ext_resource type="Script" path="res://Scripts/buttons.gd" id="1_31ys4"]
+
+[sub_resource type="Theme" id="Theme_1u5by"]
 
 [node name="Settings" type="Control"]
+process_priority = 5
+z_index = 5
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,28 +14,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(1, 0.160784, 1, 1)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_priority = 10
+layer = 10
 
-[node name="main menu" type="Button" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 324.0
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 1128.0
+offset_bottom = 633.0
+theme = SubResource("Theme_1u5by")
+color = Color(0, 0, 0, 0.917647)
+
+[node name="main menu" type="Button" parent="CanvasLayer"]
+offset_left = 180.0
+offset_top = 544.0
+offset_right = 377.0
+offset_bottom = 591.0
 text = "go to main menu
 "
 script = ExtResource("1_31ys4")
 
-[node name="resume" type="Button" parent="."]
-layout_mode = 0
-offset_top = 324.0
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="resume" type="Button" parent="CanvasLayer"]
+offset_left = 812.0
+offset_top = 550.0
+offset_right = 979.0
+offset_bottom = 587.0
 text = "resume"
 script = ExtResource("1_31ys4")
 
-[connection signal="pressed" from="main menu" to="main menu" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="resume" to="main menu" method="_go_back"]
-[connection signal="pressed" from="resume" to="main menu" method="_resume"]
+[connection signal="pressed" from="CanvasLayer/main menu" to="CanvasLayer/main menu" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_resume"]
+[connection signal="pressed" from="CanvasLayer/resume" to="CanvasLayer/main menu" method="_go_back"]

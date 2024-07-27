@@ -64,7 +64,8 @@ func updateInterface():
 	elixirDisplay.text = "[center]%s ml" % round(LevelInfo.elixir)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	if Input.is_action_just_pressed("ui_cancel") && !MenuHandler.sceneActive:
+		MenuHandler.genScene("res://Scenes/Menus/settings.tscn", "Settings")
 	if(Input.is_action_pressed("restart")):
 		Rtime += delta
 		if(Rtime > 0.2): 
