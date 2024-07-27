@@ -28,7 +28,7 @@ func _on_settings_pressed():
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func _resume():
 	var TheRoot = get_node("/root")
-	var ThisScene = get_node("/root/Node2D")
+	var ThisScene = get_node("/root/Settings")
 	TheRoot.remove_child(ThisScene)
 	ThisScene.call_deferred("free")
 	var NextScene = LevelInfo.back_screen
