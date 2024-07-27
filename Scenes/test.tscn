@@ -64,4 +64,4 @@ position = Vector2(807, 77)
 position = Vector2(204, 57)
 
 [node name="AlchemyLamp" parent="." instance=ExtResource("7_rx0gg")]
-position = Vector2(116, 67)
+position = Vector2(116, 109)

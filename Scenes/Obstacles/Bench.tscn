@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://x4uf5nb74noj"]
+
+[ext_resource type="Script" path="res://Scripts/Object2.gd" id="1_q3wbb"]
+[ext_resource type="Texture2D" uid="uid://c8u5804sx37lx" path="res://Assets/Obstacles/Bench.png" id="2_l46b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
+size = Vector2(55, 3.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
+size = Vector2(54, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swc8f"]
+size = Vector2(6, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik0w5"]
+size = Vector2(6, 7)
+
+[node name="Bench" type="StaticBody2D"]
+scale = Vector2(1.25, 1.25)
+script = ExtResource("1_q3wbb")
+shadowScale = Vector2(4, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -9.25)
+shape = SubResource("RectangleShape2D_yeoif")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("2_l46b0")
+offset = Vector2(0, -16)
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.670588)
+show_behind_parent = true
+z_index = -1
+texture = ExtResource("2_l46b0")
+offset = Vector2(24, -16)
+
+[node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_v4xkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(-24, 12)
+shape = SubResource("RectangleShape2D_swc8f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(24, 12.5)
+shape = SubResource("RectangleShape2D_ik0w5")

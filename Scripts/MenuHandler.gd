@@ -1,6 +1,7 @@
 extends Node
 var sceneActive = false
 var NodeName = ""
+# https://www.youtube.com/watch?v=jfRoLL0mEzY
 func genScene(path, nodeName):
 	var TheRoot = get_node("/root")  # need this as get_node will stop work once you remove your self from the Tree
 	var ThisScene = get_node("/root/Main")
