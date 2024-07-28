@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkd6uby1ng2ea"]
 
-[ext_resource type="Script" path="res://Scripts/Object.gd" id="1_1aiyg"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/Object.gd" id="1_1aiyg"]
 [ext_resource type="Texture2D" uid="uid://5xhp53v22ips" path="res://Assets/Obstacles/SmallBarrelFall.png" id="2_7q466"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]

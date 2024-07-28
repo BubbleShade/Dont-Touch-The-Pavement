@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bushy78xkeb3v"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacle/ObjectPickup.gd" id="1_6kdlr"]
+[ext_resource type="Shader" path="res://Scenes/Obstacles/Outline.gdshader" id="2_cup22"]
+[ext_resource type="Texture2D" uid="uid://ceugma1bsdeij" path="res://Assets/Obstacles/Box.png" id="2_jc8v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
+size = Vector2(12, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umd4y"]
+shader = ExtResource("2_cup22")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
+shader_parameter/enabled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
+size = Vector2(30, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxfno"]
+radius = 23.0868
+
+[node name="Box" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_6kdlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_yeoif")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_umd4y")
+texture = ExtResource("2_jc8v5")
+offset = Vector2(0, -16)
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.666667)
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("2_jc8v5")
+offset = Vector2(0, -16)
+
+[node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_v4xkt")
+
+[node name="Pickup" type="Area2D" parent="." groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 4
+collision_mask = 4
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+shape = SubResource("CircleShape2D_xxfno")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7qxcvf84hoit"]
 
-[ext_resource type="Script" path="res://Scripts/Object.gd" id="1_1yy5h"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/Object.gd" id="1_1yy5h"]
 [ext_resource type="Texture2D" uid="uid://bqtf6b5c4tp0u" path="res://Assets/Obstacles/AlchemyLamp.png" id="2_wc03q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]

@@ -4,7 +4,11 @@ extends CharacterBody2D
 @export var speed = 150
 @export var accel = 800
 @onready var shadowbox: Area2D = get_node("ShadowHitbox")
+@onready var pickupbox: Area2D = get_node("Pickup")
 @onready var animation: AnimatedSprite2D = get_node("AnimatedSprite")
+@onready var pickupSelected : Node2D
+@onready var holding : StaticBody2D
+@onready var holdingShadow : Node2D
 
 var collidingSafeBodies = []
 @onready var lastPosition = position
@@ -16,6 +20,11 @@ func _ready():
 	shadowbox.area_exited.connect(onBodyExit)
 	LevelInfo.restartLevel.connect(restart)
 func restart():
+	if(holding != null):
+		pickupObject()
+	if(pickupSelected != null): setOutline(pickupSelected, 0)
+	holding = null
+	pickupSelected = null
 	position = startLocation
 
 var lastStep = 0
@@ -59,11 +68,34 @@ func isSafe():
 	var tileExists = tilemap.get_cell_source_id(1, tileBelow) != -1 || tilemap.get_cell_source_id(1, tileabove) != -1
 	return (len(collidingSafeBodies) != 0) || tileExists
 	
+func pickupObject():
+	if holding == null:
+		if pickupSelected == null: return
+		holding = pickupSelected
+		holdingShadow = holding.get_node("Sprite2D/Shadow")
+		holding.get_node("CollisionShape2D").disabled = true
+		holding.position = holding.global_position - global_position
+		holding.get_parent().remove_child(holding)
+		add_child(holding)
+		holding.get_node("Sprite2D").remove_child(holdingShadow)
+		setOutline(holding, 0)
+	else:
+		holding.position = holding.global_position
+		holding.get_node("Sprite2D").add_child(holdingShadow)
+		holding.get_node("CollisionShape2D").disabled = false
+		remove_child(holding)
+		get_parent().add_child(holding)
+		pickupSelected = holding
+		holding = null
 
+		setOutline(pickupSelected, 1)
+	
 func _physics_process(delta):
 	if(!isSafe()):
 		position = lastPosition
 		velocity = Vector2.ZERO
+	if(Input.is_action_just_pressed("Interact")):
+		pickupObject()
 	lastPosition = position
 	velocity = getVelocity(delta)
 	move_and_slide()
@@ -77,3 +109,23 @@ func onBodyEnter(body: Node):
 	
 func onBodyExit(body: Node):
 	collidingSafeBodies.remove_at(collidingSafeBodies.find(body))
+	
+func _on_pickup_area_entered(area):
+	if(holding != null): return
+	var body = area.get_parent()
+	if(pickupSelected != null): 
+		setOutline(pickupSelected, 0)
+	pickupSelected = body
+	setOutline(pickupSelected, 1)
+
+func setOutline(body, outline):
+	var pickupSprite : Sprite2D = pickupSelected.get_node("Sprite2D")
+	pickupSprite.material.set_shader_parameter("line_thickness", outline)
+
+func _on_pickup_area_exited(area):
+	if(holding != null): return
+	var body = area.get_parent()
+	if(pickupSelected == body):
+		setOutline(pickupSelected, 0)
+		print("remove")
+		pickupSelected = null

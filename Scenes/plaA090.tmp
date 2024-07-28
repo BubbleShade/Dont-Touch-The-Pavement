@@ -133,8 +133,8 @@ position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_3q13q")
 
 [node name="Pickup" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 2
+collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Pickup"]
@@ -167,6 +167,3 @@ visible = false
 y_sort_enabled = true
 scale = Vector2(25, 25)
 texture = SubResource("CanvasTexture_8gg2j")
-
-[connection signal="area_entered" from="Pickup" to="." method="_on_pickup_area_entered"]
-[connection signal="area_exited" from="Pickup" to="." method="_on_pickup_area_exited"]

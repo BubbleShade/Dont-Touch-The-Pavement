@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bl8sei63qbsll"]
 
-[ext_resource type="Script" path="res://Scripts/Object.gd" id="1_udgwt"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/Object.gd" id="1_udgwt"]
 [ext_resource type="Texture2D" uid="uid://cmxwg886cxsto" path="res://Assets/Obstacles/LargeBarrel.png" id="2_q1cdc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
