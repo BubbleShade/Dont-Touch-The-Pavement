@@ -34,7 +34,7 @@ modulate = Color(0, 0, 0, 0.670588)
 show_behind_parent = true
 z_index = -1
 texture = ExtResource("2_l46b0")
-offset = Vector2(24, -16)
+offset = Vector2(0, -16)
 
 [node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
 position = Vector2(0, -16)

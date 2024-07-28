@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5xhp53v22ips" path="res://Assets/Obstacles/SmallBarrelFall.png" id="2_7q466"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
-size = Vector2(12, 3)
+size = Vector2(15, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
 size = Vector2(18, 14)
@@ -17,16 +17,17 @@ script = ExtResource("1_1aiyg")
 shadowScale = Vector2(2, 1.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13.5)
+position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_yeoif")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture = ExtResource("2_7q466")
+offset = Vector2(0, -16)
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 0.670588)
 z_index = -1
-position = Vector2(0, 16)
 texture = ExtResource("2_7q466")
 offset = Vector2(0, -16)
 
