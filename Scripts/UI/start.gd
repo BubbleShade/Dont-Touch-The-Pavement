@@ -13,5 +13,5 @@ func _process(delta):
 func _on_start_pressed():
 	#hide() # https://forum.godotengine.org/t/how-to-make-an-button-invisible/9324/3
 	animPlayer.play("Click")
-	await animPlayer.animation_finished
+	Sfx.musicEnable = true
 	SceneTransition.load_scene("Levels/Level1")

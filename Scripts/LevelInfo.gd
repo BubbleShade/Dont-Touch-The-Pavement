@@ -18,3 +18,4 @@ var elixir: float = 100
 var sound_player := AudioStreamPlayer.new()
 var pickup : Node
 var volume = 5
+var music_volume = 5

@@ -17,6 +17,7 @@ offset_bottom = 631.0
 theme = ExtResource("1_vdpm7")
 
 [node name="back" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 837.0
 offset_top = 535.0
 offset_right = 955.0
@@ -26,6 +27,7 @@ text = "Back"
 script = ExtResource("1_31ys4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
 offset_left = 222.0
 offset_top = 12.0
 offset_right = 811.0
@@ -35,14 +37,28 @@ bbcode_enabled = true
 text = "[center] Settings"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
 offset_left = 60.0
 offset_top = 81.0
 offset_right = 421.0
 offset_bottom = 121.0
+pivot_offset = Vector2(140, 54)
 theme = ExtResource("1_vdpm7")
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
-text = "Volume"
+text = "SFX Volume"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 193.0
+offset_right = 421.0
+offset_bottom = 233.0
+pivot_offset = Vector2(140, 54)
+theme = ExtResource("1_vdpm7")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "Music Volume"
 
 [node name="VolumeSlider" type="HSlider" parent="Panel"]
 layout_mode = 0
@@ -54,5 +70,15 @@ theme = ExtResource("1_vdpm7")
 max_value = 10.0
 value = 5.0
 
+[node name="VolumeSliderMusic" type="HSlider" parent="Panel"]
+offset_left = 42.0
+offset_top = 258.0
+offset_right = 425.0
+offset_bottom = 274.0
+theme = ExtResource("1_vdpm7")
+max_value = 10.0
+value = 5.0
+
 [connection signal="pressed" from="Panel/back" to="Panel/back" method="_on_back_pressed" flags=3]
 [connection signal="value_changed" from="Panel/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="Panel/VolumeSliderMusic" to="." method="_on_music_volume_slider_value_changed"]
