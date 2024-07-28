@@ -2,6 +2,8 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pressed.connect(_on_click_sound)
+	mouse_entered.connect(_on_hover_sound)
 	pass # Replace with function body.
 
 
@@ -13,7 +15,12 @@ func _process(delta):
 
 ############################# button redirects
 ############################# https://youtu.be/tmSBGJGDUuQ
-
+func _on_hover_sound():
+	if(get_tree()):
+		AudioHandler.play(get_tree().get_root(), LevelInfo.button_hover)
+func _on_click_sound():
+	if(get_tree()):
+		AudioHandler.play(get_tree().get_root(), LevelInfo.button_click)
 # https://forum.godotengine.org/t/change-scene-without-lose-the-previous-scene/17585/3
 func _on_settings_pressed_menu():
 	#get_tree().change_scene_to_file("res://Scenes/Menus/settings.tscn")

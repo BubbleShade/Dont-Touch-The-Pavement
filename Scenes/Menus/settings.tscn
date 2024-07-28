@@ -1,38 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://dukeoiahj17gk"]
+[gd_scene load_steps=4 format=3 uid="uid://dukeoiahj17gk"]
 
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_31ys4"]
+[ext_resource type="Script" path="res://Scenes/Menus/Settings.gd" id="1_rclxe"]
+[ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="1_vdpm7"]
 
-[sub_resource type="Theme" id="Theme_1u5by"]
-
-[node name="Settings" type="Control"]
+[node name="Settings" type="CanvasLayer"]
 process_mode = 3
 process_priority = 5
-z_index = 5
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+script = ExtResource("1_rclxe")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_priority = 10
-layer = 10
+[node name="Panel" type="Panel" parent="."]
+offset_left = 24.0
+offset_top = 15.0
+offset_right = 1127.0
+offset_bottom = 631.0
+theme = ExtResource("1_vdpm7")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = 21.0
-offset_top = 13.0
-offset_right = 1128.0
-offset_bottom = 633.0
-theme = SubResource("Theme_1u5by")
-color = Color(0, 0, 0, 0.917647)
-
-[node name="back" type="Button" parent="CanvasLayer"]
-offset_left = 861.0
-offset_top = 550.0
-offset_right = 979.0
-offset_bottom = 587.0
+[node name="back" type="Button" parent="Panel"]
+offset_left = 837.0
+offset_top = 535.0
+offset_right = 955.0
+offset_bottom = 572.0
+theme = ExtResource("1_vdpm7")
 text = "Back"
 script = ExtResource("1_31ys4")
 
-[connection signal="pressed" from="CanvasLayer/back" to="CanvasLayer/back" method="_on_back_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+offset_left = 222.0
+offset_top = 12.0
+offset_right = 811.0
+offset_bottom = 75.0
+theme = ExtResource("1_vdpm7")
+bbcode_enabled = true
+text = "[center] Settings"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+offset_left = 60.0
+offset_top = 81.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme = ExtResource("1_vdpm7")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 129.0
+offset_right = 428.0
+offset_bottom = 145.0
+theme = ExtResource("1_vdpm7")
+max_value = 10.0
+value = 5.0
+
+[connection signal="pressed" from="Panel/back" to="Panel/back" method="_on_back_pressed" flags=3]
+[connection signal="value_changed" from="Panel/VolumeSlider" to="." method="_on_volume_slider_value_changed"]

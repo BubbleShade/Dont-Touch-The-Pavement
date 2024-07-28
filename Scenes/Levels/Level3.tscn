@@ -29,6 +29,9 @@ layer_2/tile_data = PackedInt32Array(458752, 65536, 5, 458753, 65536, 5, 458754,
 [node name="Player" parent="." instance=ExtResource("3_tdqqe")]
 position = Vector2(134, 118)
 
+[node name="LevelUi" parent="." instance=ExtResource("2_b3ddw")]
+LevelElixer = 680
+
 [node name="Goal" parent="." instance=ExtResource("5_kcujt")]
 position = Vector2(1032, 61)
 nextLevel = "Levels/Level4"
@@ -39,11 +42,11 @@ shadowScale = Vector2(4, 1.6)
 
 [node name="LargeBarrel3" parent="." instance=ExtResource("4_vt8k4")]
 position = Vector2(478, 445)
-shadowScale = Vector2(4, 1.6)
+shadowScale = Vector2(4.2, 1.7)
 
 [node name="LargeBarrel4" parent="." instance=ExtResource("4_vt8k4")]
 position = Vector2(709, 446)
-shadowScale = Vector2(4, 1.6)
+shadowScale = Vector2(4.2, 1.7)
 
 [node name="LargeBarrel2" parent="." instance=ExtResource("4_vt8k4")]
 position = Vector2(721, 237)
@@ -86,6 +89,3 @@ shadowScale = Vector2(5, 1.9)
 [node name="AlchemyLamp2" parent="." instance=ExtResource("7_h7fac")]
 position = Vector2(1124, 439)
 shadowScale = Vector2(5, 1.9)
-
-[node name="LevelUi" parent="." instance=ExtResource("2_b3ddw")]
-LevelElixer = 480

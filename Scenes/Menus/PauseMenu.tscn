@@ -87,7 +87,7 @@ text = "Level Select
 "
 script = ExtResource("1_g6xr0")
 
-[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="Panel/Settings" to="Panel/Settings" method="_on_settings_pressed_pause"]
-[connection signal="pressed" from="Panel/back" to="." method="_unpause"]
-[connection signal="pressed" from="Panel/LevelSelect" to="Panel/LevelSelect" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "PauseMenu"]]
+[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_main_menu_pressed" flags=3]
+[connection signal="pressed" from="Panel/Settings" to="Panel/Settings" method="_on_settings_pressed_pause" flags=3]
+[connection signal="pressed" from="Panel/back" to="." method="_unpause" flags=3]
+[connection signal="pressed" from="Panel/LevelSelect" to="Panel/LevelSelect" method="_switch_menu" flags=3 binds= ["LevelSelect", "LevelSelect", "PauseMenu"]]

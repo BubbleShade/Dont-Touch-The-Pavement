@@ -64,6 +64,7 @@ func updateInterface():
 	elixirDisplay.text = "[center]%s ml" % round(LevelInfo.elixir)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	synthloop.volume_db = AudioHandler.get_vol() -10
 	if(sunManipulator.editable):
 		sunManipulator.value += Input.get_axis("UI_left","UI_right") * delta/5
 		
