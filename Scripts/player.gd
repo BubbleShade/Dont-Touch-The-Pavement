@@ -72,16 +72,16 @@ func pickupObject():
 	if holding == null:
 		if pickupSelected == null: return
 		holding = pickupSelected
-		holdingShadow = holding.get_node("Sprite2D/Shadow")
+		holdingShadow = holding.get_node("Sprite2D/Shadow/Shadow")
 		holding.get_node("CollisionShape2D").disabled = true
 		holding.position = holding.global_position - global_position
 		holding.get_parent().remove_child(holding)
 		add_child(holding)
-		holding.get_node("Sprite2D").remove_child(holdingShadow)
+		holding.get_node("Sprite2D/Shadow").remove_child(holdingShadow)
 		setOutline(holding, 0)
 	else:
 		holding.position = holding.global_position
-		holding.get_node("Sprite2D").add_child(holdingShadow)
+		holding.get_node("Sprite2D/Shadow").add_child(holdingShadow)
 		holding.get_node("CollisionShape2D").disabled = false
 		remove_child(holding)
 		get_parent().add_child(holding)

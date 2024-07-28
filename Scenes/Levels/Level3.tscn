@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c7qxcvf84hoit" path="res://Scenes/Obstacles/AlchemyLamp.tscn" id="7_h7fac"]
 [ext_resource type="PackedScene" uid="uid://c5iiuy5exvxak" path="res://Scenes/Obstacles/SmallBarrel.tscn" id="8_77rbs"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
 y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -30,7 +30,7 @@ layer_2/tile_data = PackedInt32Array(458752, 65536, 5, 458753, 65536, 5, 458754,
 position = Vector2(134, 118)
 
 [node name="LevelUi" parent="." instance=ExtResource("2_b3ddw")]
-LevelElixer = 680
+LevelElixer = 480
 
 [node name="Goal" parent="." instance=ExtResource("5_kcujt")]
 position = Vector2(1032, 61)
@@ -89,3 +89,6 @@ shadowScale = Vector2(5, 1.9)
 [node name="AlchemyLamp2" parent="." instance=ExtResource("7_h7fac")]
 position = Vector2(1124, 439)
 shadowScale = Vector2(5, 1.9)
+
+[node name="SmallBarrel7" parent="." instance=ExtResource("8_77rbs")]
+position = Vector2(600, 442)

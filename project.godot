@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LevelInfo="*res://Scripts/LevelInfo.gd"
 SceneTransition="*res://Scenes/SceneTransition.tscn"
 MenuHandler="*res://Scripts/UI/MenuHandler.gd"
+Sfx="*res://Scripts/SFX.gd"
 
 [display]
 

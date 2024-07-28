@@ -10,6 +10,7 @@ var button_hover = load("res://Sound/ButtonHover.wav")
 var slider_change = load("res://Sound/SliderChange.wav")
 var text_sound = load("res://Sound/TextSound.wav")
 var level_complete = load("res://Sound/LevelFinish.wav")
+var bkg_music = load("res://Sound/LevelFinish.wav")
 
 var ShadowProgress : float = 0.5
 var maxElixir: float = 100

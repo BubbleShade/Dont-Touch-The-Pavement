@@ -73,6 +73,7 @@ text = "1
 "
 
 [node name="Main Menu" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 876.0
 offset_top = 523.0
 offset_right = 1066.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://4oksel8c7pgq"]
 
-[ext_resource type="Script" path="res://Scenes/Exposition.gd" id="1_86xx7"]
+[ext_resource type="Script" path="res://Scripts/UI/Exposition.gd" id="1_7rfe0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1dah"]
 bg_color = Color(0, 0, 0, 0.662745)
@@ -16,7 +16,7 @@ corner_radius_bottom_left = 20
 [node name="Exposition" type="CanvasLayer"]
 process_mode = 3
 layer = 8
-script = ExtResource("1_86xx7")
+script = ExtResource("1_7rfe0")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = -1

@@ -1,12 +1,12 @@
-extends Control
+extends CanvasLayer
 
 @export var LevelElixer : int = 100
-@onready var tint : ColorRect = get_node("ScreenTint")
-@onready var sunManipulator : HSlider = get_node("Canvas/Panel/SunManipulator")
-@onready var elixirVial : TextureProgressBar = get_node("Canvas/ElixirVial")
-@onready var elixirEmptyWarn : RichTextLabel = get_node("Canvas/ElixerEmptyWarning")
-@onready var pressR : RichTextLabel = get_node("Canvas/Tip1")
-@onready var elixirDisplay : RichTextLabel = get_node("Canvas/ElixirVial/Percent")
+@onready var tint : ColorRect = get_node("CanvasLayer/ScreenTint")
+@onready var sunManipulator : HSlider = get_node("Panel/SunManipulator")
+@onready var elixirVial : TextureProgressBar = get_node("ElixirVial")
+@onready var elixirEmptyWarn : RichTextLabel = get_node("ElixerEmptyWarning")
+@onready var pressR : RichTextLabel = get_node("Tip1")
+@onready var elixirDisplay : RichTextLabel = get_node("ElixirVial/Percent")
 @onready var synthloop = AudioHandler.createLoop(self, LevelInfo.synth, -10, 0.4)
 var Rtime = 0
 # Called when the node enters the scene tree for the first time.
@@ -49,8 +49,10 @@ func setScreenTint():
 var dragging = false
 func dragStart(): 
 	synthloop.stream_paused = false
+	dragging = true
 func dragEnd(valueChanged : bool):
 	synthloop.stream_paused = true
+	dragging = false
 
 	#tint.color = Color(1-distFromMiddle, (1-distFromMiddle)*0.5, 0, distFromMiddle)
 	
@@ -66,6 +68,10 @@ func updateInterface():
 func _process(delta):
 	synthloop.volume_db = AudioHandler.get_vol() -10
 	if(sunManipulator.editable):
+		if(Input.get_axis("UI_left","UI_right") != 0):
+			synthloop.stream_paused = false
+		elif(!synthloop.stream_paused && !dragging):
+			synthloop.stream_paused = true
 		sunManipulator.value += Input.get_axis("UI_left","UI_right") * delta/5
 		
 	# https://www.youtube.com/watch?v=jfRoLL0mEzY
