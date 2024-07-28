@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvnyfmt0glkdu"]
+[gd_scene load_steps=9 format=3 uid="uid://dvnyfmt0glkdu"]
 
 [ext_resource type="Texture2D" uid="uid://btrfaxh522idi" path="res://Assets/MainMenu/StreetSolo.png" id="2_fl13a"]
 [ext_resource type="Texture2D" uid="uid://d4glmfh8c2knx" path="res://Assets/MainMenu/MainMenuOrb.png" id="3_004oi"]
 [ext_resource type="Script" path="res://Scripts/UI/start.gd" id="3_5s143"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="4_788hi"]
 
 [sub_resource type="Animation" id="Animation_puqv0"]
 resource_name = "Click"
 length = 1.00002
-step = 0.2
+step = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -140,6 +141,12 @@ _data = {
 "RESET": SubResource("Animation_p4vjs")
 }
 
+[sub_resource type="Theme" id="Theme_ey22x"]
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.603922)
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 23
+RichTextLabel/constants/shadow_outline_size = 0
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -170,4 +177,52 @@ libraries = {
 "": SubResource("AnimationLibrary_iown6")
 }
 
+[node name="start text" type="RichTextLabel" parent="icon"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 140.0
+offset_right = 203.0
+offset_bottom = 239.0
+scale = Vector2(1.02574, 1.00552)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 0.72549)
+theme_override_font_sizes/normal_font_size = 60
+text = "Start"
+fit_content = true
+
+[node name="level select" type="Button" parent="."]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 587.0
+offset_right = 1130.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 35
+text = "Level select"
+script = ExtResource("4_788hi")
+
+[node name="settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 587.0
+offset_right = 552.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 35
+text = "Settings
+"
+script = ExtResource("4_788hi")
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 55.0
+offset_right = 1047.0
+offset_bottom = 154.0
+scale = Vector2(0.982443, 0.995701)
+theme = SubResource("Theme_ey22x")
+theme_override_font_sizes/normal_font_size = 72
+text = "Don't Touch The Pavement"
+
 [connection signal="pressed" from="icon" to="icon" method="_on_start_pressed"]
+[connection signal="pressed" from="level select" to="level select" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "MainMenu"]]
+[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed_menu"]
+[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]

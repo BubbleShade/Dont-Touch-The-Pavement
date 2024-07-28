@@ -46,3 +46,11 @@ func _switch_menu(name: String, nodeName: String, currentNodeName: String):
 
 
 
+
+
+func _on_settings_pressed():
+	pass # Replace with function body.
+
+
+func _on_pressed():
+	pass # Replace with function body.
