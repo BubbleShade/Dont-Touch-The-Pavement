@@ -1,6 +1,144 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvnyfmt0glkdu"]
+[gd_scene load_steps=7 format=3 uid="uid://fbmdj3fjc2bm"]
 
-[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_j7fq5"]
+[ext_resource type="Texture2D" uid="uid://btrfaxh522idi" path="res://Assets/MainMenu/StreetSolo.png" id="2_fl13a"]
+[ext_resource type="Texture2D" uid="uid://d4glmfh8c2knx" path="res://Assets/MainMenu/MainMenuOrb.png" id="3_004oi"]
+[ext_resource type="Script" path="res://Scripts/UI/start.gd" id="3_5s143"]
+
+[sub_resource type="Animation" id="Animation_puqv0"]
+resource_name = "Click"
+length = 1.00002
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("icon:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(453, -0.25, 0, 0.25, 0, 465, -0.25, 0, 0.25, 0, 453, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("icon:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(198, -0.25, 0, 0.25, 0, 213, -0.25, 0, 0.25, 0, 198, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("icon:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("icon:size:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(256, -0.25, 0, 0.25, 0, 218, -0.25, 0, 0.25, 0, 256, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("icon:size:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(253, -0.25, 0, 0.25, 0, 217, -0.25, 0, 0.25, 0, 253, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_p4vjs"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(453, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("icon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(198, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("icon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("icon:size:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(256, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("icon:size:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(253, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iown6"]
+_data = {
+"Click": SubResource("Animation_puqv0"),
+"RESET": SubResource("Animation_p4vjs")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,31 +148,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.113725, 1, 1, 1)
+texture = ExtResource("2_fl13a")
 
-[node name="start game" type="Button" parent="."]
+[node name="icon" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 324.0
-text = "click me for furries near you
-SEKAIIIIIIII
-"
-script = ExtResource("1_j7fq5")
+offset_left = 453.0
+offset_top = 198.0
+offset_right = 709.0
+offset_bottom = 451.0
+texture_normal = ExtResource("3_004oi")
+stretch_mode = 0
+script = ExtResource("3_5s143")
 
-[node name="settings" type="Button" parent="."]
-layout_mode = 0
-offset_top = 324.0
-offset_right = 1152.0
-offset_bottom = 648.0
-text = "settings
-"
-script = ExtResource("1_j7fq5")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="icon"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_iown6")
+}
 
-[connection signal="pressed" from="start game" to="start game" method="_on_start_pressed"]
-[connection signal="pressed" from="start game" to="start game" method="_on_pressed"]
-[connection signal="pressed" from="start game" to="start game" method="_on_button_pressed"]
-[connection signal="pressed" from="settings" to="start game" method="_on_settings_pressed_menu"]
+[connection signal="pressed" from="icon" to="icon" method="_on_start_pressed"]
