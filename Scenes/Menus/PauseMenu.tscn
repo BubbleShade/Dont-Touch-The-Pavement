@@ -1,15 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c77luiir4aghj"]
+[gd_scene load_steps=5 format=3 uid="uid://c77luiir4aghj"]
 
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_g6xr0"]
 [ext_resource type="Script" path="res://Scripts/UI/PauseMenu.gd" id="1_pj3lh"]
+[ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="2_h3xv4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8tbv"]
-bg_color = Color(0.0476613, 5.62769e-05, 0.141394, 0.737255)
+bg_color = Color(0.462745, 0.258824, 0.541176, 0.752941)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.743244, 0.640002, 0, 1)
+border_color = Color(0.984314, 0.94902, 0.211765, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -34,6 +35,7 @@ offset_left = 23.0
 offset_top = 477.0
 offset_right = 368.0
 offset_bottom = 544.0
+theme = ExtResource("2_h3xv4")
 text = "Return to Main Menu"
 script = ExtResource("1_g6xr0")
 
@@ -43,6 +45,7 @@ offset_left = 4.0
 offset_top = 55.0
 offset_right = 393.0
 offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.9, 0.8715, 0.558, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -2
 theme_override_constants/shadow_offset_y = 2
@@ -57,6 +60,7 @@ offset_left = 23.0
 offset_top = 290.0
 offset_right = 368.0
 offset_bottom = 357.0
+theme = ExtResource("2_h3xv4")
 text = "Settings
 "
 script = ExtResource("1_g6xr0")
@@ -67,15 +71,18 @@ offset_left = 23.0
 offset_top = 202.0
 offset_right = 368.0
 offset_bottom = 269.0
+theme = ExtResource("2_h3xv4")
 text = "Return to Game
 "
 script = ExtResource("1_g6xr0")
 
 [node name="LevelSelect" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 382.0
 offset_right = 369.0
 offset_bottom = 449.0
+theme = ExtResource("2_h3xv4")
 text = "Level Select
 "
 script = ExtResource("1_g6xr0")

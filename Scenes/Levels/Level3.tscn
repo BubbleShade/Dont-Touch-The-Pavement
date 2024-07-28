@@ -49,13 +49,6 @@ shadowScale = Vector2(4, 1.6)
 position = Vector2(721, 237)
 shadowScale = Vector2(4, 1.6)
 
-[node name="LevelUi" parent="." instance=ExtResource("2_b3ddw")]
-offset_left = 515.581
-offset_top = 437.29
-offset_right = 515.581
-offset_bottom = 437.29
-LevelElixer = 480
-
 [node name="Bench" parent="." instance=ExtResource("6_mpcwn")]
 position = Vector2(209, 247)
 
@@ -93,3 +86,6 @@ shadowScale = Vector2(5, 1.9)
 [node name="AlchemyLamp2" parent="." instance=ExtResource("7_h7fac")]
 position = Vector2(1124, 439)
 shadowScale = Vector2(5, 1.9)
+
+[node name="LevelUi" parent="." instance=ExtResource("2_b3ddw")]
+LevelElixer = 480

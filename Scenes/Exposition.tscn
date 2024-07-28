@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://4oksel8c7pgq"]
+
+[ext_resource type="Script" path="res://Scenes/Exposition.gd" id="1_86xx7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1dah"]
+bg_color = Color(0, 0, 0, 0.662745)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Exposition" type="CanvasLayer"]
+process_mode = 3
+layer = 8
+script = ExtResource("1_86xx7")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.172
+offset_left = 3.0
+offset_top = 444.0
+offset_right = 945.856
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n1dah")
+
+[node name="Textbox" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 1128.0
+offset_bottom = 170.0
+bbcode_enabled = true
+text = "Test Text
+"
+
+[node name="SpaceToContinue" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 983.0
+offset_top = 171.0
+offset_right = 1150.0
+offset_bottom = 201.0
+text = "Space to continue
+"

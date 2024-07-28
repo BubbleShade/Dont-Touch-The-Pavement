@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7p3yfxuf4lci"]
+[gd_scene load_steps=7 format=3 uid="uid://b7p3yfxuf4lci"]
 
 [ext_resource type="TileSet" uid="uid://dgukfxthoomud" path="res://MasterTileset.tres" id="1_f72em"]
 [ext_resource type="PackedScene" uid="uid://cmh2uygnq3e7t" path="res://Scenes/LevelUI.tscn" id="2_7gsfr"]
 [ext_resource type="PackedScene" uid="uid://dvy7fuss2xujj" path="res://Scenes/player.tscn" id="3_khtqf"]
 [ext_resource type="PackedScene" uid="uid://bl8sei63qbsll" path="res://Scenes/Obstacles/LargeBarrel.tscn" id="4_micvy"]
 [ext_resource type="PackedScene" uid="uid://cwa3d3uwt0ghr" path="res://Scenes/Goal.tscn" id="5_j7wmh"]
+[ext_resource type="PackedScene" uid="uid://4oksel8c7pgq" path="res://Scenes/Exposition.tscn" id="6_0af11"]
 
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
@@ -46,3 +47,5 @@ position = Vector2(468, 578)
 [node name="Goal" parent="." instance=ExtResource("5_j7wmh")]
 position = Vector2(1085, 334)
 nextLevel = "Levels/Level2"
+
+[node name="Exposition" parent="." instance=ExtResource("6_0af11")]

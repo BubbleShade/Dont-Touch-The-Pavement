@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://btfhj78t2w417"]
+[gd_scene load_steps=9 format=3 uid="uid://btfhj78t2w417"]
 
 [ext_resource type="TileSet" uid="uid://dgukfxthoomud" path="res://MasterTileset.tres" id="1_7wqxi"]
 [ext_resource type="PackedScene" uid="uid://cmh2uygnq3e7t" path="res://Scenes/LevelUI.tscn" id="2_ibeop"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dkd6uby1ng2ea" path="res://Scenes/Obstacles/SmallBarrelFall.tscn" id="6_ls1l8"]
 [ext_resource type="PackedScene" uid="uid://bl8sei63qbsll" path="res://Scenes/Obstacles/LargeBarrel.tscn" id="7_wr1qk"]
 [ext_resource type="PackedScene" uid="uid://c5iiuy5exvxak" path="res://Scenes/Obstacles/SmallBarrel.tscn" id="8_k7udl"]
-[ext_resource type="PackedScene" uid="uid://x4uf5nb74noj" path="res://Scenes/Obstacles/Bench.tscn" id="9_mywod"]
 
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
@@ -97,6 +96,3 @@ position = Vector2(429, 283)
 
 [node name="LargeBarrel4" parent="." instance=ExtResource("7_wr1qk")]
 position = Vector2(722, 283)
-
-[node name="Bench" parent="." instance=ExtResource("9_mywod")]
-position = Vector2(556, 279)
