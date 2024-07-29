@@ -2,6 +2,7 @@ extends CanvasLayer
 
 func openLevel(level):
 	SceneTransition.load_scene("Levels/%s" % level, "DropDown")
+	get_tree().paused = false
 	await get_tree().create_timer(1).timeout
 	MenuHandler.clearScenes()
 func _ready():
