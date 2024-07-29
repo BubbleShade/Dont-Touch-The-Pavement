@@ -35,6 +35,7 @@ position = Vector2(199, 564)
 
 [node name="Goal" parent="." instance=ExtResource("4_4q5bh")]
 position = Vector2(1018, 111)
+nextLevel = "Levels/Level10"
 id = 8
 
 [node name="Box2" parent="." instance=ExtResource("5_sn0ur")]

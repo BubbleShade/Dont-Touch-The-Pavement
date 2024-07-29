@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://iiyk57gm7l52"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacle/Object.gd" id="1_m1n82"]
+[ext_resource type="Texture2D" uid="uid://2llcw8krxtff" path="res://Assets/Obstacles/BigBarrelFall.png" id="2_uo6ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoif"]
+size = Vector2(19, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xkt"]
+size = Vector2(24, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it1nd"]
+size = Vector2(6, 8)
+
+[node name="BigBarrelFall" type="StaticBody2D"]
+script = ExtResource("1_m1n82")
+shadowScale = Vector2(2, 1.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_yeoif")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("2_uo6ia")
+offset = Vector2(0, -16)
+flip_h = true
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.670588)
+z_index = -1
+texture = ExtResource("2_uo6ia")
+offset = Vector2(0, -16)
+flip_h = true
+
+[node name="Shadow" type="Area2D" parent="Sprite2D/Shadow" groups=["shadow"]]
+position = Vector2(0, -16)
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_v4xkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/Shadow/Shadow"]
+position = Vector2(-13, 12)
+shape = SubResource("RectangleShape2D_it1nd")

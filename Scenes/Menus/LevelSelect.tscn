@@ -284,4 +284,5 @@ script = ExtResource("2_edfjt")
 [connection signal="pressed" from="Panel/Lvl7" to="." method="openLevel" binds= ["Level7"]]
 [connection signal="pressed" from="Panel/Lvl8" to="." method="openLevel" binds= ["Level8"]]
 [connection signal="pressed" from="Panel/Lvl9" to="." method="openLevel" binds= ["Level9"]]
+[connection signal="pressed" from="Panel/Lvl10" to="." method="openLevel" binds= ["Level10"]]
 [connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_back_pressed"]
