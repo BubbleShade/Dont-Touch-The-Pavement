@@ -4,8 +4,9 @@ var all_cutscene = [
 	[
 "Uh oh, looks like I forgot to wear my shoes on my walk to work again.",
 "I dont want to burn my feet on the pavement, so i'll have to be sure to walk [i]in the shadows[/i].",
-"Looks like I'll have to use my trusty [i]Sun Manipulator[/i] in order to move the sun and transform the shadows,
- I'll have to be careful about how much [i]Elixir[/i] I use though, as I only have enough to get to work."],
+"Looks like I'll have to use my trusty [i]Sun Manipulator (arrow keys)[/i] in order to move the sun and transform the shadows,
+ I'll have to be careful about how much [i]Elixir[/i] I use though, as I only have enough to get to work.",
+"I just have to get to the [i]Purple Star[/i] on each level."],
 ["Hey look, those are [i]Emergency Boxes[/i], they are left out for weary travelers to move using the [b]f[/b] key,
  in case of forgotten shoes"]
 	]

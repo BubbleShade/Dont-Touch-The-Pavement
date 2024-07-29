@@ -71,6 +71,7 @@ max_value = 10.0
 value = 5.0
 
 [node name="VolumeSliderMusic" type="HSlider" parent="Panel"]
+layout_mode = 0
 offset_left = 42.0
 offset_top = 258.0
 offset_right = 425.0

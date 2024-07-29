@@ -56,3 +56,9 @@ position = Vector2(807, 77)
 
 [node name="Box" parent="." instance=ExtResource("7_dwvgn")]
 position = Vector2(180, 122)
+
+[node name="Box2" parent="." instance=ExtResource("7_dwvgn")]
+position = Vector2(286, 128)
+
+[node name="Box3" parent="." instance=ExtResource("7_dwvgn")]
+position = Vector2(233, 115)
