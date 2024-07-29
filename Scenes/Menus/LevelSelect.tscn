@@ -1,42 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://bk172ey48w80w"]
 
-[ext_resource type="StyleBox" uid="uid://1wcbx3t4g1xc" path="res://Scenes/Menus/new_style_box_flat.tres" id="1_3vy0l"]
+[ext_resource type="Script" path="res://Scenes/Menus/LevelSelect.gd" id="1_8dw6p"]
+[ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="2_552k0"]
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="2_edfjt"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs0ae"]
-bg_color = Color(0.164706, 0, 0.196078, 0.796078)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.368651, 0.37377, 0, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gokxs"]
-bg_color = Color(0.119277, 0.118651, 0.180596, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.688134, 0.597014, 0.0151292, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[ext_resource type="Theme" uid="uid://dmnwm7eyy0dt4" path="res://Scenes/Menus/LvlSelect.tres" id="3_6wbh2"]
 
 [node name="LevelSelect" type="CanvasLayer"]
 process_mode = 3
 layer = 10
+script = ExtResource("1_8dw6p")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 11.0
 offset_top = 8.0
 offset_right = 1136.0
 offset_bottom = 631.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hs0ae")
+theme = ExtResource("2_552k0")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
@@ -60,16 +39,109 @@ offset_top = 135.0
 offset_right = 339.0
 offset_bottom = 175.0
 
-[node name="Button2" type="Button" parent="Panel"]
+[node name="Lvl1" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 111.0
 offset_top = 110.0
 offset_right = 203.0
 offset_bottom = 197.0
+theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("1_3vy0l")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gokxs")
 text = "1
+"
+
+[node name="Lvl2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 110.0
+offset_right = 385.0
+offset_bottom = 197.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "2
+"
+
+[node name="Lvl3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 110.0
+offset_right = 567.0
+offset_bottom = 197.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="Lvl4" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 110.0
+offset_right = 749.0
+offset_bottom = 197.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "4
+"
+
+[node name="Lvl5" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 839.0
+offset_top = 110.0
+offset_right = 931.0
+offset_bottom = 197.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "5"
+
+[node name="Lvl6" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 254.0
+offset_right = 203.0
+offset_bottom = 341.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "6
+"
+
+[node name="Lvl7" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 254.0
+offset_right = 385.0
+offset_bottom = 341.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "7"
+
+[node name="Lvl8" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 254.0
+offset_right = 567.0
+offset_bottom = 341.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "8"
+
+[node name="Lvl9" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 254.0
+offset_right = 749.0
+offset_bottom = 341.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "9"
+
+[node name="Lvl10" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 839.0
+offset_top = 254.0
+offset_right = 931.0
+offset_bottom = 341.0
+theme = ExtResource("3_6wbh2")
+theme_override_font_sizes/font_size = 50
+text = "10
 "
 
 [node name="Main Menu" type="Button" parent="Panel"]
@@ -82,4 +154,5 @@ text = "Back
 "
 script = ExtResource("2_edfjt")
 
+[connection signal="pressed" from="Panel/Lvl1" to="." method="openLevel" binds= ["Level1"]]
 [connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_back_pressed"]

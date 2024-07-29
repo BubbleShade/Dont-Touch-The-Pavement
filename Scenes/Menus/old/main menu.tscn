@@ -34,7 +34,7 @@ text = "settings
 "
 script = ExtResource("1_j7fq5")
 
-[connection signal="pressed" from="start game" to="start game" method="_on_start_pressed"]
 [connection signal="pressed" from="start game" to="start game" method="_on_pressed"]
+[connection signal="pressed" from="start game" to="start game" method="_on_start_pressed"]
 [connection signal="pressed" from="start game" to="start game" method="_on_button_pressed"]
 [connection signal="pressed" from="settings" to="start game" method="_on_settings_pressed_menu"]

@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dmnwm7eyy0dt4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m38q5"]
+bg_color = Color(0.784314, 0.552941, 1, 0.12549)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.820489, 0.841226, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spt0o"]
+bg_color = Color(0.784314, 0.552941, 1, 0.12549)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ioqt"]
+bg_color = Color(0.833514, 0.723231, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8l4c"]
+bg_color = Color(0.940222, 0.841759, 0.980758, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_k8xtf"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qna63"]
+bg_color = Color(0.0114173, 9.39226e-06, 0.0292186, 0.67451)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.888751, 0.743559, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+Button/colors/font_color = Color(0.993, 1, 0.58, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_m38q5")
+Button/styles/normal = SubResource("StyleBoxFlat_spt0o")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_5ioqt")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_j8l4c")
+HSlider/styles/slider = SubResource("StyleBoxLine_k8xtf")
+Panel/styles/panel = SubResource("StyleBoxFlat_qna63")
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0.352941, 0.870588)
+RichTextLabel/constants/shadow_offset_x = -3
+RichTextLabel/constants/shadow_offset_y = 3
+RichTextLabel/font_sizes/normal_font_size = 32

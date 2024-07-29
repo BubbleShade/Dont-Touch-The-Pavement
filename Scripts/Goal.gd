@@ -9,6 +9,6 @@ func _on_body_entered(body):
 	print("collide")
 	if(body.is_in_group("player")):
 		AudioHandler.play(get_tree().get_root(), LevelInfo.level_complete)
-		SceneTransition.load_scene(nextLevel)
+		SceneTransition.load_scene(nextLevel, "FadeWipe")
 		loading_next_scene = true
 		return

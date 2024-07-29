@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dukeoiahj17gk"]
 
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="1_31ys4"]
-[ext_resource type="Script" path="res://Scenes/Menus/Settings.gd" id="1_rclxe"]
+[ext_resource type="Script" path="res://Scripts/UI/Settings.gd" id="1_rclxe"]
 [ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="1_vdpm7"]
 
 [node name="Settings" type="CanvasLayer"]

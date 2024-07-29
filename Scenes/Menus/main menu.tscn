@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvnyfmt0glkdu"]
+[gd_scene load_steps=11 format=3 uid="uid://dvnyfmt0glkdu"]
 
 [ext_resource type="Texture2D" uid="uid://btrfaxh522idi" path="res://Assets/MainMenu/StreetSolo.png" id="2_fl13a"]
 [ext_resource type="Texture2D" uid="uid://d4glmfh8c2knx" path="res://Assets/MainMenu/MainMenuOrb.png" id="3_004oi"]
@@ -8,73 +8,61 @@
 
 [sub_resource type="Animation" id="Animation_puqv0"]
 resource_name = "Click"
-length = 1.00002
+length = 0.4
 step = 2.0
-tracks/0/type = "value"
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("icon:scale")
+tracks/0/path = NodePath("icon:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(453, -0.25, 0, 0.25, 0, 465, -0.25, 0, 0.25, 0, 453, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("icon:position:x")
+tracks/1/path = NodePath("icon:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(453, -0.25, 0, 0.25, 0, 465, -0.25, 0, 0.25, 0, 453, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(198, -0.25, 0, 0.25, 0, 213, -0.25, 0, 0.25, 0, 198, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("icon:position:y")
+tracks/2/path = NodePath("icon:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(198, -0.25, 0, 0.25, 0, 213, -0.25, 0, 0.25, 0, 198, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("icon:rotation")
+tracks/3/path = NodePath("icon:size:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(256, -0.25, 0, 0.25, 0, 218, -0.25, 0, 0.25, 0, 256, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("icon:size:x")
+tracks/4/path = NodePath("icon:size:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(256, -0.25, 0, 0.25, 0, 218, -0.25, 0, 0.25, 0, 256, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 0.4)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("icon:size:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(253, -0.25, 0, 0.25, 0, 217, -0.25, 0, 0.25, 0, 253, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(253, -0.25, 0, 0.25, 0, 218, -0.25, 0, 0.25, 0, 253, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4)
 }
 
@@ -136,9 +124,38 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_vl4dl"]
+resource_name = "Click2"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.85, 0.85), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("icon/start text:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"update": 0,
+"values": [Vector2(-1, 107), Vector2(20, 120), Vector2(-1, 107)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iown6"]
 _data = {
 "Click": SubResource("Animation_puqv0"),
+"Click2": SubResource("Animation_vl4dl"),
 "RESET": SubResource("Animation_p4vjs")
 }
 
@@ -168,6 +185,7 @@ offset_left = 453.0
 offset_top = 198.0
 offset_right = 709.0
 offset_bottom = 451.0
+pivot_offset = Vector2(128, 128)
 texture_normal = ExtResource("3_004oi")
 stretch_mode = 0
 script = ExtResource("3_5s143")
@@ -228,5 +246,5 @@ text = "Don't Touch The Pavement"
 
 [connection signal="pressed" from="icon" to="icon" method="_on_start_pressed"]
 [connection signal="pressed" from="level select" to="level select" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "MainMenu"]]
-[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed_menu"]
 [connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]
+[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed_menu"]
