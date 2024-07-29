@@ -146,6 +146,54 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(256, 253), Vector2(256, 253)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("icon/start text:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.02574, 1.00552)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("icon/start text:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 120), Vector2(-9.49999, 87.6667)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("icon/start text:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("icon/start text:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(251, 99), Vector2(251, 99)]
+}
 
 [sub_resource type="Animation" id="Animation_p4vjs"]
 length = 0.001
@@ -228,6 +276,42 @@ tracks/6/keys = {
 "update": 0,
 "values": [Vector2(256, 253)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("icon/start text:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 120)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("icon/start text:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("icon/start text:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(251, 99)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iown6"]
 _data = {
@@ -277,10 +361,10 @@ libraries = {
 
 [node name="start text" type="RichTextLabel" parent="icon"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 107.0
-offset_right = 250.0
-offset_bottom = 206.0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 271.0
+offset_bottom = 219.0
 scale = Vector2(1.02574, 1.00552)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.111896, 0.000149783, 0.204709, 0.72549)
