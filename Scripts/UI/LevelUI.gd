@@ -72,7 +72,7 @@ func _process(delta):
 			synthloop.stream_paused = false
 		elif(!synthloop.stream_paused && !dragging):
 			synthloop.stream_paused = true
-		sunManipulator.value += Input.get_axis("UI_left","UI_right") * delta/5
+		sunManipulator.value -= Input.get_axis("UI_left","UI_right") * delta/5
 		
 	# https://www.youtube.com/watch?v=jfRoLL0mEzY
 	# https://www.reddit.com/r/godot/comments/cjigi4/how_do_i_make_hitting_the_esc_key_exit_the_game/?rdt=47979

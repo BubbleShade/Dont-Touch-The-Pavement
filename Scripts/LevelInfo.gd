@@ -22,3 +22,4 @@ var sound_player := AudioStreamPlayer.new()
 var pickup : Node
 var volume = 5
 var music_volume = 5
+var levelsCompleted = [false, false, false, false, false, false, false, false, false, false]

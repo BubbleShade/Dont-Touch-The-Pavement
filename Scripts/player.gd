@@ -38,7 +38,7 @@ func PlayWalkSound(delta):
 	if(timeSinceLastStep < 0.4): return
 	timeSinceLastStep = 0
 	var tilemap : TileMap = get_node("../TileMap")
-	var tileBelow := tilemap.local_to_map(global_position + Vector2(0,8)) 
+	var tileBelow := tilemap.local_to_map(global_position) 
 	var tileExists = tilemap.get_cell_source_id(1, tileBelow) != -1
 	if(tileExists):
 		AudioHandler.play(self, LevelInfo.walk_sound_effect_grass, -25, 0.8)
@@ -65,9 +65,12 @@ func getVelocity(delta):
 	
 func isSafe():
 	var tilemap : TileMap = get_node("../TileMap")
-	var tileBelow := tilemap.local_to_map(global_position + Vector2(0,8)) 
+	var tileBelow := tilemap.local_to_map(global_position - Vector2(0,8)) 
 	var tileabove := tilemap.local_to_map(global_position) 
-	var tileExists = tilemap.get_cell_source_id(1, tileBelow) != -1 || tilemap.get_cell_source_id(1, tileabove) != -1
+	var tileMuchBelow := tilemap.local_to_map(global_position + Vector2(0,4)) 
+	var tileExists = (tilemap.get_cell_source_id(1, tileBelow) != -1 || 
+					tilemap.get_cell_source_id(1, tileabove) != -1 ||
+					tilemap.get_cell_source_id(1, tileMuchBelow) != -1)
 	return (len(collidingSafeBodies) != 0) || tileExists
 	
 

@@ -12,7 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(musicEnable):
-		bkg_loop.stream_paused = get_tree().paused
-	else:
-		bkg_loop.stream_paused = true
+	bkg_loop.stream_paused = false
+	#if(musicEnable):
+	#	bkg_loop.stream_paused = false
+	#else:
+		#bkg_loop.stream_paused = true
