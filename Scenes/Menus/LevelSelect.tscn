@@ -1,10 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://bk172ey48w80w"]
+[gd_scene load_steps=16 format=3 uid="uid://bk172ey48w80w"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/LevelSelect.gd" id="1_8dw6p"]
 [ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="2_552k0"]
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="2_edfjt"]
 [ext_resource type="Theme" uid="uid://dmnwm7eyy0dt4" path="res://Scenes/Menus/LvlSelect.tres" id="3_6wbh2"]
 [ext_resource type="Texture2D" uid="uid://cpc7qcq1joxk8" path="res://Assets/TempGoal.png" id="4_35gav"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bv841"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_molpw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6nodh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6my2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqwg7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57g3p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcfit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4hoe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxa2c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m31b2"]
 
 [node name="LevelSelect" type="CanvasLayer"]
 process_mode = 3
@@ -48,6 +68,7 @@ offset_right = 203.0
 offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bv841")
 text = "1
 "
 
@@ -68,6 +89,7 @@ offset_right = 385.0
 offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_molpw")
 text = "2
 "
 
@@ -88,6 +110,7 @@ offset_right = 567.0
 offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6nodh")
 text = "3"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl3"]
@@ -107,6 +130,7 @@ offset_right = 749.0
 offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6my2y")
 text = "4
 "
 
@@ -127,6 +151,7 @@ offset_right = 931.0
 offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nqwg7")
 text = "5"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl5"]
@@ -146,6 +171,7 @@ offset_right = 203.0
 offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_57g3p")
 text = "6
 "
 
@@ -166,6 +192,7 @@ offset_right = 385.0
 offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bcfit")
 text = "7"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl7"]
@@ -185,6 +212,7 @@ offset_right = 567.0
 offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4hoe")
 text = "8"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl8"]
@@ -204,6 +232,7 @@ offset_right = 749.0
 offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kxa2c")
 text = "9"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl9"]
@@ -223,6 +252,7 @@ offset_right = 931.0
 offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m31b2")
 text = "10
 "
 

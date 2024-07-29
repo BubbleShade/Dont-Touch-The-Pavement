@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvnyfmt0glkdu"]
+[gd_scene load_steps=12 format=3 uid="uid://dvnyfmt0glkdu"]
 
 [ext_resource type="Texture2D" uid="uid://btrfaxh522idi" path="res://Assets/MainMenu/StreetSolo.png" id="2_fl13a"]
 [ext_resource type="Texture2D" uid="uid://d4glmfh8c2knx" path="res://Assets/MainMenu/MainMenuOrb.png" id="3_004oi"]
@@ -66,6 +66,34 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4)
 }
 
+[sub_resource type="Animation" id="Animation_vl4dl"]
+resource_name = "Click2"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.85, 0.85), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("icon/start text:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"update": 0,
+"values": [Vector2(-1, 107), Vector2(20, 120), Vector2(-1, 107)]
+}
+
 [sub_resource type="Animation" id="Animation_p4vjs"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -123,10 +151,35 @@ tracks/4/keys = {
 "points": PackedFloat32Array(253, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("icon:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(453, 198)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("icon:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 253)]
+}
 
-[sub_resource type="Animation" id="Animation_vl4dl"]
-resource_name = "Click2"
-length = 0.4
+[sub_resource type="Animation" id="Animation_rseei"]
+resource_name = "Hover"
+length = 0.222228
+step = 0.0555556
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -134,28 +187,53 @@ tracks/0/path = NodePath("icon:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 0.85), Vector2(1, 1)]
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("icon/start text:position")
+tracks/1/path = NodePath("icon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(0.25, 0.25, 1),
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-1, 107), Vector2(20, 120), Vector2(-1, 107)]
+"values": [Vector2(453, 198), Vector2(453, 198)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("icon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("icon:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 253), Vector2(256, 253)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iown6"]
 _data = {
 "Click": SubResource("Animation_puqv0"),
 "Click2": SubResource("Animation_vl4dl"),
+"Hover": SubResource("Animation_rseei"),
 "RESET": SubResource("Animation_p4vjs")
 }
 
@@ -185,7 +263,8 @@ offset_left = 453.0
 offset_top = 198.0
 offset_right = 709.0
 offset_bottom = 451.0
-pivot_offset = Vector2(128, 128)
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(128, 126)
 texture_normal = ExtResource("3_004oi")
 stretch_mode = 0
 script = ExtResource("3_5s143")
@@ -244,7 +323,9 @@ theme = SubResource("Theme_ey22x")
 theme_override_font_sizes/normal_font_size = 72
 text = "Don't Touch The Pavement"
 
+[connection signal="mouse_entered" from="icon" to="icon" method="_on_hover"]
+[connection signal="mouse_exited" from="icon" to="icon" method="_on_unhover"]
 [connection signal="pressed" from="icon" to="icon" method="_on_start_pressed"]
 [connection signal="pressed" from="level select" to="level select" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "MainMenu"]]
-[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]
 [connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed_menu"]
+[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]
