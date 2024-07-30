@@ -61,6 +61,7 @@ func getVelocity(delta):
 
 	if(input_direction.x == 0): newVelocity.x = 0
 	if(input_direction.y == 0): newVelocity.y = 0
+	if(!isSafe()): newVelocity *= 5
 	return newVelocity
 	
 func isSafe():

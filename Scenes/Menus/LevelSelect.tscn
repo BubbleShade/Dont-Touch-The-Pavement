@@ -69,8 +69,7 @@ offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bv841")
-text = "1
-"
+text = "1"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl1"]
 visible = false
@@ -90,8 +89,7 @@ offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_molpw")
-text = "2
-"
+text = "2"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl2"]
 visible = false
@@ -131,8 +129,7 @@ offset_bottom = 197.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6my2y")
-text = "4
-"
+text = "4"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl4"]
 visible = false
@@ -172,8 +169,7 @@ offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_57g3p")
-text = "6
-"
+text = "6"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl6"]
 visible = false
@@ -253,8 +249,7 @@ offset_bottom = 341.0
 theme = ExtResource("3_6wbh2")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m31b2")
-text = "10
-"
+text = "10"
 
 [node name="Star" type="TextureRect" parent="Panel/Lvl10"]
 visible = false
@@ -271,8 +266,7 @@ offset_left = 876.0
 offset_top = 523.0
 offset_right = 1066.0
 offset_bottom = 590.0
-text = "Back
-"
+text = "Back"
 script = ExtResource("2_edfjt")
 
 [connection signal="pressed" from="Panel/Lvl1" to="." method="openLevel" binds= ["Level1"]]

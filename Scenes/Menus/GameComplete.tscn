@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvh1l5nq80tgd"]
+
+[ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="1_cq304"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="2_iqfet"]
+
+[node name="GameComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 11.0
+offset_right = 1130.0
+offset_bottom = 633.0
+theme = ExtResource("1_cq304")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 15.0
+offset_right = 1110.0
+offset_bottom = 140.0
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Congratualations!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 175.0
+offset_right = 1107.0
+offset_bottom = 231.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center] You made it to work while keeping your poor feet uncooked!"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 343.0
+offset_right = 1107.0
+offset_bottom = 399.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center] Thanks for playing!"
+
+[node name="Main Menu" type="Button" parent="Panel"]
+offset_left = 391.0
+offset_top = 542.0
+offset_right = 736.0
+offset_bottom = 609.0
+theme = ExtResource("1_cq304")
+text = "Return to Main Menu"
+script = ExtResource("2_iqfet")
+
+[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_on_main_menu_pressed" flags=3]

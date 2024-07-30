@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://gay4bncab367"]
+
+[ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="1_du6ob"]
+[ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="2_nts7a"]
+
+[node name="GameUncomplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 11.0
+offset_right = 1130.0
+offset_bottom = 633.0
+theme = ExtResource("1_du6ob")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 15.0
+offset_right = 1110.0
+offset_bottom = 140.0
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Congratualations!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 175.0
+offset_right = 1107.0
+offset_bottom = 291.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center] You beat level 10, however, it looks like you still have some work to do. Complete all levels and come back."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 311.0
+offset_right = 1107.0
+offset_bottom = 367.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center] Thanks for playing!"
+
+[node name="Main Menu" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 540.0
+offset_right = 720.0
+offset_bottom = 607.0
+theme = ExtResource("1_du6ob")
+text = "Level Select"
+script = ExtResource("2_nts7a")
+
+[connection signal="pressed" from="Panel/Main Menu" to="Panel/Main Menu" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "GameUncomplete"]]

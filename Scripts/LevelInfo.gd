@@ -14,6 +14,8 @@ var bkg_music = load("res://Sound/LevelFinish.wav")
 var sizzle = load("res://Sound/FeetBurn.wav")
 var pickup_sound = load("res://Sound/Pickup.wav")
 var drop_sound = load("res://Sound/Drop.wav")
+var start_click_sound = load("res://Sound/StartClick.wav")
+var start_hover_sound = load("res://Sound/StartHover2.wav")
 
 var ShadowProgress : float = 0.5
 var maxElixir: float = 100
@@ -23,3 +25,7 @@ var pickup : Node
 var volume = 5
 var music_volume = 5
 var levelsCompleted = [false, false, false, false, false, false, false, false, false, false]
+func allLevelComplete():
+	for i in levelsCompleted:
+		if(!i): return false
+	return true

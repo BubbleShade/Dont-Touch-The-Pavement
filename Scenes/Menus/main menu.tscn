@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/start.gd" id="3_5s143"]
 [ext_resource type="Script" path="res://Scripts/UI/buttons.gd" id="4_788hi"]
 [ext_resource type="Theme" uid="uid://d337ijetc036w" path="res://Scenes/Menus/PauseMenu.tres" id="4_ev8lq"]
+[ext_resource type="Texture2D" uid="uid://bso86eem53dyn" path="res://Assets/Title.png" id="6_5777j"]
 
 [sub_resource type="Animation" id="Animation_puqv0"]
 resource_name = "Click"
@@ -321,12 +322,6 @@ _data = {
 "RESET": SubResource("Animation_p4vjs")
 }
 
-[sub_resource type="Theme" id="Theme_ey22x"]
-RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.603922)
-RichTextLabel/constants/shadow_offset_x = 0
-RichTextLabel/constants/shadow_offset_y = -32
-RichTextLabel/constants/shadow_outline_size = 0
-
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -391,20 +386,17 @@ offset_right = 552.0
 offset_bottom = 644.0
 theme = ExtResource("4_ev8lq")
 theme_override_font_sizes/font_size = 35
-text = "Settings
-"
+text = "Settings"
 script = ExtResource("4_788hi")
 
-[node name="title" type="RichTextLabel" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 55.0
-offset_right = 1047.0
-offset_bottom = 154.0
-scale = Vector2(0.982443, 0.995701)
-theme = SubResource("Theme_ey22x")
-theme_override_font_sizes/normal_font_size = 72
-text = "Don't Touch The Pavement"
+offset_left = 183.0
+offset_right = 951.0
+offset_bottom = 192.0
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(384, 96)
+texture = ExtResource("6_5777j")
 
 [connection signal="mouse_entered" from="icon" to="icon" method="_on_hover"]
 [connection signal="mouse_exited" from="icon" to="icon" method="_on_unhover"]
