@@ -402,5 +402,5 @@ texture = ExtResource("6_5777j")
 [connection signal="mouse_exited" from="icon" to="icon" method="_on_unhover"]
 [connection signal="pressed" from="icon" to="icon" method="_on_start_pressed"]
 [connection signal="pressed" from="level select" to="level select" method="_switch_menu" binds= ["LevelSelect", "LevelSelect", "MainMenu"]]
-[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]
 [connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed_menu"]
+[connection signal="pressed" from="settings" to="level select" method="_on_settings_pressed"]

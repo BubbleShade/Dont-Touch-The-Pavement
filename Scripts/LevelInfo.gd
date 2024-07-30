@@ -3,7 +3,7 @@ extends Node
 signal restartLevel
 var walk_sound_effect_grass = load("res://Sound/GrassWalk.wav")
 var walk_sound_concrete = load("res://Sound/WalkConcrete.wav")
-var synth = load("res://Sound/synth(1).wav")
+var synth = load("res://Sound/synth4.wav")
 var restart_sound = load("res://Sound/RestartLevel.wav")
 var button_click = load("res://Sound/ButtonClick.wav")
 var button_hover = load("res://Sound/ButtonHover.wav")

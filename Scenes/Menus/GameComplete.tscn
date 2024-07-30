@@ -50,6 +50,7 @@ bbcode_enabled = true
 text = "[center] Thanks for playing!"
 
 [node name="Main Menu" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 391.0
 offset_top = 542.0
 offset_right = 736.0
